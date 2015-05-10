@@ -13,7 +13,6 @@
 [Dd]ebug/
 [Rr]elease/
 x64/
-[Bb]in/
 [Oo]bj/
 [Dd]ist/
 [Oo]ut/
@@ -28,7 +27,7 @@ typings/
 *.js.map
 *.d.ts
 *.js
-!template/static/*.*
+!template/static/**/*.*
 !typings/jsdoc/*.*
 !typings/_definitions.d.ts
 !Gruntfile.js

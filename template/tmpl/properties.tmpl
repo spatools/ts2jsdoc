@@ -1,0 +1,119 @@
+<?js
+    var props = obj;
+
+    /* sort subprops under their parent props (like opts.classname) */
+    var parentProp = null;
+    props.forEach(function(prop, i) {
+        if (!prop) { return; }
+        if ( parentProp && prop.name && prop.name.indexOf(parentProp.name + '.') === 0 ) {
+            prop.name = prop.name.substr(parentProp.name.length+1);
+            parentProp.subprops = parentProp.subprops || [];
+            parentProp.subprops.push(prop);
+            props[i] = null;
+        }
+        else {
+            parentProp = prop;
+        }
+    });
+
+    /* determine if we need extra columns, "attributes" and "default" */
+    props.hasAttributes = false;
+    props.hasDefault = false;
+    props.hasType = false;
+    props.hasName = false;
+    props.hasDesc = false;
+
+    props.forEach(function(prop) {
+        if (!prop) { return; }
+
+        if (prop.optional || prop.nullable) {
+            props.hasAttributes = true;
+        }
+
+        if (prop.type && prop.type.names) {
+            props.hasType = true;
+        }
+
+        if (prop.name) {
+            props.hasName = true;
+        }
+
+        if (prop.description || prop.subprops) {
+            props.hasDesc = true;
+        }
+
+        if (typeof prop.defaultvalue !== 'undefined') {
+            props.hasDefault = true;
+        }
+    });
+?>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		<?js if (props.hasName) {?>
+		<th>Name</th>
+		<?js } ?>
+
+        <?js if (props.hasType) {?>
+		<th>Type</th>
+        <?js } ?>
+
+		<?js if (props.hasAttributes) {?>
+		<th>Argument</th>
+		<?js } ?>
+
+		<?js if (props.hasDefault) {?>
+		<th>Default</th>
+		<?js } ?>
+
+        <?js if (props.hasDesc) {?>
+		<th class="last">Description</th>
+        <?js } ?>
+	</tr>
+	</thead>
+
+	<tbody>
+	<?js
+        var self = this;
+	    props.forEach(function(prop) {
+	        if (!prop) { return; }
+	?>
+
+        <tr>
+            <?js if (props.hasName) {?>
+                <td class="name"><code><?js= prop.name ?></code></td>
+            <?js } ?>
+
+            <?js if (props.hasType && prop.type && prop.type.names) {?>
+                <td class="type">
+                    <?js= self.partial('type.tmpl', prop.type.names) ?>
+                </td>
+            <?js } ?>
+
+            <?js if (props.hasAttributes) {?>
+                <td class="attributes">
+                    <?js if (prop.optional) { ?>&lt;optional&gt;<br /><?js } ?>
+                    <?js if (prop.nullable) { ?>&lt;nullable&gt;<br /><?js } ?>
+                </td>
+            <?js } ?>
+
+            <?js if (props.hasDefault && typeof prop.defaultvalue !== 'undefined') {?>
+                <td class="default">
+                    <?js= self.htmlsafe(prop.defaultvalue) ?>
+                </td>
+            <?js } ?>
+
+            <?js if (props.hasDesc && (prop.description || prop.subprops)) {?>
+            <td class="description last">
+                <?js= prop.description ?>
+                <?js if (prop.subprops) { ?>
+                <h6>Properties</h6><?js= self.partial('properties.tmpl', prop.subprops) ?>
+                <?js } ?>
+            </td>
+            <?js } ?>
+        </tr>
+
+	<?js }); ?>
+	</tbody>
+</table>

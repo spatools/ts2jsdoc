@@ -1,0 +1,10 @@
+<?js
+var data = obj;
+var self = this;
+
+data.forEach(function(example) {
+    if (example.caption) { ?>
+        <h5 class="code-caption"><?js= example.caption ?></h5>
+    <?js } ?>
+    <pre class="prettyprint<?js= (self.options.linenums ? ' linenums': '') ?>"><?js= self.htmlsafe(example.code) ?></pre>
+<?js }); ?>

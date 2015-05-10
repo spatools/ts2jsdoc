@@ -1,0 +1,33 @@
+<?js
+var self = this;
+var doc = obj.doc;
+var nav = obj.nav;
+?>
+<aside class="well" role="navigation">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="nav-header<?js= (doc && doc.kind === 'package') ? ' active': '' ?>">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="divider"></li>
+        <?js nav.topLevel.forEach(function(entry) { ?>
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-<?js=entry.title.replace(/\s+/g, '-')?>">
+                <?js= entry.title ?>
+                <span class="badge badge-info pull-right"><?js= entry.members.length ?></span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-<?js=entry.title.replace(/\s+/g, '-')?>" class="collapse<?js= entry.selected ? ' in' : '' ?>" aria-expanded="<?js= entry.selected ?>">
+                <ul class="nav nav-pills nav-stacked">
+                    <?js entry.members.forEach(function(member){ ?>
+                    <li>
+                        <?js= (typeof member === "string") ? member : member.link ?>
+                    </li>
+                    <?js }); ?>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        <?js }); ?>
+    </ul>
+</aside>

@@ -1,0 +1,26 @@
+<?js
+var self = this;
+var doc = obj.doc;
+var nav = obj.nav;
+var isInline = this.options.navType ==='inline'
+?>
+<ul class="nav navbar-nav">
+    <li class="<?js= (doc && doc.kind === 'package') ? 'active': '' ?>">
+        <a href="index.html">Home</a>
+    </li>
+    <?js nav.topLevel.forEach(function(entry) { ?>
+    <li class="dropdown<?js= entry.selected ? ' active' : '' ?>">
+        <a href="<?js= entry.link ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          <?js= entry.title ?> 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu<?js= isInline ? ' inline' : '' ?>" role="menu">
+            <?js if (isInline) {?><ul class="list-inline"><?js}?>
+            <?js entry.members.forEach(function(member){ ?>
+                <li><?js= typeof member === "string" ? member : member.link ?></li>
+            <?js }); ?>
+            <?js if (isInline) {?></ul><?js}?>
+        </ul>
+    </li>
+    <?js }); ?>
+</ul>

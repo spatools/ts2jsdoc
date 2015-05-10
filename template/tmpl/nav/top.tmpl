@@ -1,0 +1,33 @@
+<?js
+var self = this;
+var doc = obj.doc;
+var nav = obj.nav;
+?>
+<nav class="navbar navbar-default navbar-fixed-top<?js= this.options.inverseNav ? ' navbar-inverse' : '' ?>">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><?js= this.options.systemName ?></a>
+        </div>
+        <div class="collapse navbar-collapse" id="top-menu-collapse">
+            <?js if(this.options.tableOfContents) { ?>
+                <?js= this.partial('nav/top-toc.tmpl', { nav: nav, doc: doc }) ?>
+            <?js } else { ?>
+                <?js= this.partial('nav/top-notoc.tmpl', { nav: nav, doc: doc }) ?>
+            <?js } ?>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control typeahead" placeholder="Search for..." />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>

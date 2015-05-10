@@ -1,0 +1,76 @@
+﻿body {
+    padding-top: 70px;
+}
+
+header nav ul.dropdown-menu {
+    position: fixed;
+    top: auto;
+    left: auto;
+    max-height: 85%;
+    overflow-y: auto;
+}
+header nav ul.dropdown-menu.inline {
+    left: 1em;
+    right: 1em;
+    padding: 1em 2em;
+    line-height: 2em;
+}
+
+.affix-top {
+    position: fixed;
+}
+.affix-bottom {
+    position: absolute;
+}
+
+aside .nav .nav-header {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+aside .nav-stacked .nav-stacked a {
+    padding: 5px 7px 5px 2em;
+}
+aside.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#main .page-header,
+#main .page-header h1 {
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+#main pre.prettyprint {
+    border-color: #ccc;
+    padding: 10px;
+}
+
+.signature-optional:before {
+    content: '[';
+}
+.signature-optional:after {
+    content: ']';
+}
+
+.panel .panel-heading[data-toggle=collapse] {
+    cursor: pointer;
+}
+.panel .panel-heading .label {
+    padding: .3em .6em;
+    margin-right: .3em;
+}
+.panel .panel-heading .glyphicon-arrow-right {
+  font-size: .8em;
+}
+
+.tt-hint {
+    color: #aaa;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+

@@ -1,0 +1,10 @@
+<?js
+var self = this;
+var doc = obj.doc;
+var nav = obj.nav;
+?>
+<?js if(this.options.tableOfContents) { ?>
+    <?js= this.partial('nav/side-toc.tmpl', { nav: nav, doc: doc }) ?>
+<?js } else { ?>
+    <?js= this.partial('nav/side-notoc.tmpl', { nav: nav, doc: doc }) ?>
+<?js } ?>
