@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "lib/ast.js",
   "bin": {
-    "jsdocts": "bin/ts2jsdoc.js"
+    "jsdocts": "bin/ts2jsdoc"
   },
   "author": {
     "name": "SPATools",
@@ -19,14 +19,6 @@
     "bin": "bin",
     "lib": "lib"
   },
-  "files": [
-    "plugin.js",
-    "bin/ts2jsdoc.js",
-    "lib/*.js",
-    "template/**/*.js",
-    "template/**/*.css",
-    "template/**/*.tmpl"
-  ],
   "peerDependencies": {
     "typescript": "~1.4.0"
   },
