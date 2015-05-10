@@ -1,0 +1,9 @@
+*.ts
+*.d.ts
+temp/
+out/
+dist/
+typings/
+Gruntfile.js
+tslint.json
+.travis.yml
