@@ -16,6 +16,9 @@ header nav ul.dropdown-menu.inline {
     line-height: 2em;
 }
 
+.sidebar {
+    z-index: 99;
+}
 .affix-top {
     position: fixed;
 }
