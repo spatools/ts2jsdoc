@@ -42,7 +42,25 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
+        jsdoc : {
+            typescript : {
+                src: ["node_modules/typescript/bin/typescript.d.ts"],
+                dest: "<%= paths.dist %>/typescript",
+                options: { configure: "conf.json" }
+            },
+            lib : {
+                src: ["node_modules/typescript/bin/lib.d.ts"],
+                dest: "<%= paths.dist %>/typescript",
+                options: { configure: "conf.json" }
+            },
+            node : {
+                src: ["typings/node/node.d.ts"],
+                dest: "<%= paths.dist %>/node",
+                options: { configure: "conf.json" }
+            }
+        },
+
         tslint: {
             options: {
                 configuration: grunt.file.readJSON("tslint.json")
@@ -57,7 +75,7 @@ module.exports = function (grunt) {
                 "<%= paths.all %>/**/*.{d.ts,js,js.map}", 
                 "./*.{d.ts,js,js.map}", 
                 "!<%= paths.tmpl %>/static/**",
-                "!Gruntfile.js",
+                "!./Gruntfile.js",
             ],
             temp: "<%= paths.temp %>"
         },
