@@ -4,10 +4,17 @@ import common = require("./common");
 import utils = require("./utils");
 
 export function forVar(list: jsdoc.CommentsList, node: ts.VariableDeclaration, checker: ts.TypeChecker): void {
-    var parent = node.parent, comments;
+    var parent = node.parent,
+        comments: jsdoc.Comments;
 
     if (parent.kind === ts.SyntaxKind.TypeLiteral) {
-        comments = list.get("typedef", utils.getAnonymousName(parent), utils.getParentName(parent.parent, checker));
+        var anonymousName = utils.getAnonymousName(parent);
+        comments = list.get("typedef", anonymousName, utils.getParentName(parent.parent, checker));
+
+        if (!comments) {
+            comments = list.get("interface", anonymousName, utils.getParentModuleName(parent, checker));
+        }
+
         common.addTypeDefProperty(comments, "property", node, checker);
     }
     else {
@@ -52,7 +59,7 @@ export function forInterface(list: jsdoc.CommentsList, node: ts.InterfaceDeclara
         common.addParent(comments, node, checker);
         common.addCallSignatures(comments, node, "ctor", ctorSignatures, checker);
         common.addCallSignatures(comments, node, "call", callSignatures, checker);
-        common.addVariation(comments, node, checker, true);
+        common.merge(comments, node, checker);
     }
 }
 
@@ -96,12 +103,13 @@ export function forModule(list: jsdoc.CommentsList, node: ts.ModuleDeclaration, 
     if (utils.isExternal(node)) {
         //common.addName(comments, "namespace", node);
         comments.getOrAddTag("module").name = node.name.text.replace(/"/g, "");
-        common.addVariation(comments, node, checker, true);
+        comments.getOrAddTag("global");
+        common.merge(comments, node, checker);
     }
     else {
         common.addName(comments, "namespace", node);
         common.addParent(comments, node, checker);
-        common.addVariation(comments, node, checker, true);
+        common.merge(comments, node, checker);
     }
 }
 
