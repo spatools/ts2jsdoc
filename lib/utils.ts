@@ -30,6 +30,29 @@ export function getDefault(node: NodeWithInitializer): string {
     return initializer.text || initializer.getText();
 }
 
+export function getParentModuleName(node: ts.Node, checker: ts.TypeChecker): string {
+    while (node.parent.kind !== ts.SyntaxKind.ModuleDeclaration && node.parent.kind !== ts.SyntaxKind.SourceFile) {
+        node = node.parent;
+    }
+
+    if (node.parent.kind === ts.SyntaxKind.ModuleDeclaration) {
+        var symbol = checker.getTypeAtLocation(node.parent).getSymbol(),
+            typeName = symbol ?
+                checker.getFullyQualifiedName(symbol).replace(/"/g, "") :
+                (<ts.ModuleDeclaration>node.parent).name.text.replace(/"/g, "");
+
+        return (isExternal(<ts.ModuleDeclaration>node.parent) ? "module:" : "") + typeName;
+    }
+    else { //(node.parent.kind === ts.SyntaxKind.SourceFile)
+        var mod = (<ts.SourceFile>node).amdModuleName;
+        if (mod) {
+            return "module:" + mod;
+        }
+    }
+
+    return null;
+}
+
 export function getParentName(node: ts.Node, checker: ts.TypeChecker): string {
     var symbol;
     var kinds = [
@@ -54,7 +77,9 @@ export function getParentName(node: ts.Node, checker: ts.TypeChecker): string {
     }
     else if (node.parent.kind === ts.SyntaxKind.ModuleDeclaration) {
         symbol = checker.getTypeAtLocation(node.parent).getSymbol();
-        var typeName = checker.getFullyQualifiedName(symbol).replace(/"/g, "");
+        var typeName = symbol ?
+            checker.getFullyQualifiedName(symbol).replace(/"/g, "") :
+            (<ts.ModuleDeclaration>node.parent).name.text.replace(/"/g, "");
 
         return (isExternal(<ts.ModuleDeclaration>node.parent) ? "module:" : "") + typeName;
     }
@@ -68,14 +93,16 @@ export function getParentName(node: ts.Node, checker: ts.TypeChecker): string {
     return null;
 }
 export function getAnonymousName(node: ts.Node): string {
-    var nodeType = (<NodeWithType>node).type,
-        nodeName, tagName = "";
-
-    nodeName = getNodeName(node);
+    var oldNode = node,
+        nodeType = (<NodeWithType>node).type,
+        nodeName = getNodeName(node),
+        tagName = "", parent: ts.Node;
 
     var kinds = [
         ts.SyntaxKind.VariableDeclaration,
         ts.SyntaxKind.Property,
+        ts.SyntaxKind.CallSignature,
+        ts.SyntaxKind.ConstructSignature,
         ts.SyntaxKind.FunctionDeclaration,
         ts.SyntaxKind.Method,
         ts.SyntaxKind.Parameter
@@ -88,8 +115,8 @@ export function getAnonymousName(node: ts.Node): string {
         if (!node) {
             var msg =
                 "Unknow scenario during anonymous name construction.\n" +
-                "Node kind:\t" + getSyntaxKindString(node) + "\n" +
-                "Node text:\t" + node.getText();
+                "Node kind:\t" + getSyntaxKindString(oldNode) + "\n" +
+                "Node text:\t" + oldNode.getText();
 
             var err: any = new Error(msg);
             err.node = node;
@@ -97,12 +124,27 @@ export function getAnonymousName(node: ts.Node): string {
         }
     }
 
-    if (node.kind === ts.SyntaxKind.FunctionDeclaration || node.kind === ts.SyntaxKind.Method) {
+    if (node.kind === ts.SyntaxKind.FunctionDeclaration || node.kind === ts.SyntaxKind.Method ||
+        node.kind === ts.SyntaxKind.ConstructSignature || node.kind === ts.SyntaxKind.CallSignature) {
         tagName = "Returns";
     }
     else if (node.kind === ts.SyntaxKind.Parameter) {
         tagName = nodeName.substr(0, 1).toUpperCase() + nodeName.substr(1);
         nodeName = getNodeName(node.parent);
+
+
+        if (!nodeName) {
+            if (node.parent.kind === ts.SyntaxKind.ConstructSignature || node.parent.kind === ts.SyntaxKind.Constructor) {
+                nodeName = "Construct";
+            }
+            else if (node.parent.kind === ts.SyntaxKind.CallSignature) {
+                nodeName = "Call";
+            }
+            else {
+                nodeName = getAnonymousName(node.parent.parent);
+            }
+
+        }
     }
     //else if (node.kind === ts.SyntaxKind.VariableDeclaration || node.kind === ts.SyntaxKind.Property) {
     //    //tagName = isCallback ? "Callback" : "Type";

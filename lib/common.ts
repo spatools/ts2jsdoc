@@ -17,16 +17,28 @@ function addTypeToTag(comments: jsdoc.Comments, tag: jsdoc.Tag, node: utils.Node
         var comm = comments.addLinked(),
             tagName = utils.getAnonymousName(node);
 
-        addParent(comm, node, checker);
-
         if (subNode.parameters) {
             var signature = checker.getSignatureFromDeclaration(subNode);
 
             comm.addTag("callback", tagName);
+            addParent(comm, node, checker);
             addFromSignature(comm, subNode, signature, checker);
         }
         else {
-            comm.addTag("typedef", tagName).type = "Object";
+            var subType = checker.getTypeAtLocation(subNode),
+                calls = subType.getCallSignatures(),
+                ctors = subType.getConstructSignatures();
+
+            if (calls.length || ctors.length) {
+                comm.addTag("interface", tagName);
+                addParentModule(comm, subNode, checker);
+                addCallSignatures(comm, subNode, "ctor", ctors, checker);
+                addCallSignatures(comm, subNode, "call", calls, checker);
+            }
+            else {
+                comm.addTag("typedef", tagName).type = "Object";
+                addParent(comm, node, checker);
+            }
         }
     });
 
@@ -106,6 +118,19 @@ export function addParent(comments: jsdoc.Comments, node: ts.Node, checker: ts.T
     }
 }
 
+export function addParentModule(comments: jsdoc.Comments, node: ts.Node, checker: ts.TypeChecker): void {
+    if (!node.parent) {
+        return;
+    }
+
+    var parentName = utils.getParentModuleName(node, checker);
+
+    if (parentName) {
+        var tag = comments.getOrAddTag("memberof");
+        tag.name = parentName;
+    }
+}
+
 export function addModifier(comments: jsdoc.Comments, node: ts.Node): void {
     var isInterface = node.parent && node.parent.kind === ts.SyntaxKind.InterfaceDeclaration;
 
@@ -137,7 +162,29 @@ export function addDefault(comments: jsdoc.Comments, node: utils.NodeWithInitial
     }
 }
 
-export function addVariation(comments: jsdoc.Comments, node: ts.Node, checker: ts.TypeChecker, merge?: boolean): void {
+export function merge(comments: jsdoc.Comments, node: ts.Node, checker: ts.TypeChecker): void {
+    var typeName = utils.getParentName(node, checker),
+        nodeName = utils.getNodeName(node) || typeName,
+        prevComments: jsdoc.Comments,
+        cache = comments.list.cache.merges;
+
+    typeName = typeName ? typeName + "." + nodeName : nodeName;
+
+    if (!cache) {
+        cache = comments.list.cache.merges = Object.create(null);
+    }
+
+    if (typeof cache[typeName] === "undefined") {
+        cache[typeName] = comments;
+    }
+    else {
+        prevComments = cache[typeName];
+        comments.mergeTo(prevComments);
+        comments.clean();
+    }
+}
+
+export function addVariation(comments: jsdoc.Comments, node: ts.Node, checker: ts.TypeChecker): void {
     var typeName = utils.getParentName(node, checker),
         nodeName = utils.getNodeName(node) || typeName,
         prevComments: jsdoc.Comments,
@@ -149,24 +196,12 @@ export function addVariation(comments: jsdoc.Comments, node: ts.Node, checker: t
         cache = comments.list.cache.variations = Object.create(null);
     }
 
-    if (merge) {
-        if (typeof cache[typeName] === "undefined") {
-            cache[typeName] = comments;
-        }
-        else {
-            prevComments = cache[typeName];
-            comments.mergeTo(prevComments);
-            comments.clean();
-        }
+    if (typeof cache[typeName] === "undefined") {
+        cache[typeName] = 1;
     }
     else {
-        if (typeof cache[typeName] === "undefined") {
-            cache[typeName] = 1;
-        }
-        else {
-            cache[typeName]++;
-            comments.getOrAddTag("variation").name = cache[typeName];
-        }
+        cache[typeName]++;
+        comments.getOrAddTag("variation").name = cache[typeName];
     }
 }
 
@@ -222,7 +257,7 @@ export function addCallbacks(comments: jsdoc.Comments, node: ts.InterfaceDeclara
     });
 }
 
-export function addCallSignatures(comments: jsdoc.Comments, node: ts.InterfaceDeclaration, tagPrefix: string, signatures: ts.Signature[], checker: ts.TypeChecker): void {
+export function addCallSignatures(comments: jsdoc.Comments, node: ts.Node, tagPrefix: string, signatures: ts.Signature[], checker: ts.TypeChecker): void {
     signatures.forEach(signature => {
         var comm = comments.addLinked(),
             childNode = signature.getDeclaration();
