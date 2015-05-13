@@ -21,15 +21,13 @@ x64/
 
 # Dependencies
 node_modules/
-typings/**/*.*
 
 # Ignore development files
 *.js.map
 *.d.ts
 *.js
 !template/static/**/*.*
-!typings/jsdoc/*.d.ts
-!typings/_definitions.d.ts
+!typings/**/*.*
 !Gruntfile.js
 
 # MSTest test Results
