@@ -14,9 +14,9 @@
     "templates": {
         "systemName": "node.js",
         "theme": "styles",
-        "navType": "vertical",
+        "navType": "inline",
         "inverseNav": true,
-        "tableOfContents": true,
+        "tableOfContents": false,
         "linenums": false,
         "collapseSymbols": true,
         "footer": "Generated using default node.d.ts using <strong>ts2jsdoc</strong> project.",

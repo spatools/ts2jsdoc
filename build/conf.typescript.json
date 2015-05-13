@@ -14,7 +14,7 @@
     "templates": {
         "systemName": "typescript",
         "theme": "default",
-        "navType": "vertical",
+        "navType": "inline",
         "inverseNav": false,
         "tableOfContents": true,
         "linenums": false,
