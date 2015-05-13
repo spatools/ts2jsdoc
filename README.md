@@ -28,8 +28,8 @@ A JSDoc plugin with an optional template which automatically adds JSDoc comments
 
 You can see some demos here:
 
-* __typescript.d.ts__: [https://spatools.github.io/ts2jsdoc/typescript/]()
-* __node.d.ts__: [https://spatools.github.io/ts2jsdoc/node/]()
+* __typescript.d.ts__: [https://spatools.github.io/ts2jsdoc/typescript/](https://spatools.github.io/ts2jsdoc/typescript/)
+* __node.d.ts__: [https://spatools.github.io/ts2jsdoc/node/](https://spatools.github.io/ts2jsdoc/node/)
 
 ## Plugin
 
