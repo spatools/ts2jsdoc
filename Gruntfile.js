@@ -114,6 +114,7 @@ module.exports = function (grunt) {
                     commit: true,
                     push: true,
                     branch: "gh-pages",
+                    //remote: "git@github.com:spatools/ts2jsdoc.git",
                     message: "Built documentations %sourceName% from commit %sourceCommit% on branch %sourceBranch%"
                 }
             }
