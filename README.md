@@ -2,7 +2,9 @@
 
 A JSDoc plugin with an optional template which automatically adds JSDoc comments based on Typescript definitions.
 
-## Features
+## Overview
+
+### Features
 
  * Automatically adds JSDoc comments based on Typescript's types:
     * Adds variables and properties types, modifiers, and default values.
@@ -21,6 +23,13 @@ A JSDoc plugin with an optional template which automatically adds JSDoc comments
  * Supports interfaces call signatures and constructs signature __@callsignature__ and __@ctorsignature__.
  * Automatically adds comments for anonymous types using __@callback__ or __@typedef__ tags.
  * Transforms interfaces with only call signatures in callbacks.
+
+### Demos
+
+You can see some demos here:
+
+* __typescript.d.ts__: [https://spatools.github.io/ts2jsdoc/typescript/]()
+* __node.d.ts__: [https://spatools.github.io/ts2jsdoc/node/]()
 
 ## Plugin
 
