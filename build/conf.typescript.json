@@ -15,7 +15,7 @@
         "systemName": "typescript",
         "theme": "default",
         "navType": "vertical",
-        "inverseNav": true,
+        "inverseNav": false,
         "tableOfContents": true,
         "linenums": false,
         "collapseSymbols": true,
