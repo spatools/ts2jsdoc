@@ -16,8 +16,13 @@ this.nav.topLevel.forEach(function(entry) {
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <?js if (!this.options.theme || this.options.theme === "default") { ?>
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+    <?js } else { ?>
+    <link type="text/css" rel="stylesheet" href="<?js= this.options.theme ?>/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?js= this.options.theme ?>/bootstrap-theme.min.css" />
+    <?js } ?>
     <link type="text/css" rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -29,7 +34,7 @@ this.nav.topLevel.forEach(function(entry) {
             <div class="sidebar col-sm-5 col-md-4 col-lg-3">
                 <?js= this.partial('nav/side.tmpl', { nav: this.nav, doc: doc }) ?>
             </div>
-            <div class="col-sm-7 col-md-8 col-lg-9 col-sm-offset-5 col-md-offset-4 col-lg-offset-3">
+            <div class="col-sm-7 col-md-8 col-lg-9<?js= this.options.tableOfContents ? ' col-sm-offset-5 col-md-offset-4 col-lg-offset-3' : '' ?>">
                 <div id="main">
                     <?js= content ?>
                 </div>
@@ -53,8 +58,8 @@ this.nav.topLevel.forEach(function(entry) {
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <?js if (this.options.tableOfContents) { ?>
     <script src="https://cdn.rawgit.com/jgallen23/toc/master/dist/toc.min.js"></script>
     <script src="scripts/applytoc.js"></script>
