@@ -1,7 +1,7 @@
 {
   "name": "ts2jsdoc",
   "version": "0.1.0",
-  "description": "ts2jsdoc",
+  "description": "A JSDoc plugin with an optional template which automatically adds JSDoc comments based on Typescript definitions.",
   "license": "MIT",
   "main": "lib/ast.js",
   "bin": {
