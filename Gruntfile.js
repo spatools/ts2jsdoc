@@ -24,7 +24,7 @@ module.exports = function (grunt) {
             defs: "typings/_definitions.d.ts",
             temp: "temp"
         },
-
+        
         typescript: {
             options: {
                 target: "es5",
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+        
         jsdoc : {
             typescript : {
                 src: ["node_modules/typescript/bin/typescript.d.ts"],
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
                 options: { configure: "<%= paths.build %>/conf.node.json" }
             }
         },
-
+        
         tslint: {
             options: {
                 configuration: grunt.file.readJSON("tslint.json")
@@ -108,17 +108,18 @@ module.exports = function (grunt) {
         },
         
         buildcontrol: {
-            options: {
-                dir: "<%= paths.dist %>",
-                commit: true,
-                push: true,
-                branch: "gh-pages",
-                message: "Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%"
-            },
-            dist: { }
+            docs: {
+                options: {
+                    dir: "<%= paths.dist %>",
+                    commit: true,
+                    push: true,
+                    branch: "gh-pages",
+                    message: "Built documentations %sourceName% from commit %sourceCommit% on branch %sourceBranch%"
+                }
+            }
         }
     });
-
+    
     
     grunt.registerTask("dev", ["tslint:src", "clean:src", "typescript:src"]);
     grunt.registerTask("build", ["tslint:src", "clean:src", "typescript:dist"]);
@@ -126,7 +127,7 @@ module.exports = function (grunt) {
     
     grunt.registerTask("serve", ["dev", "doc", "connect:dist", "watch"]);
     
-    grunt.registerTask("publish", ["build", "buildcontrol:publish"]);
+    grunt.registerTask("publish", ["build", "doc", "buildcontrol:docs"]);
     
     grunt.registerTask("default", ["build"]);
 };
