@@ -71,8 +71,6 @@
             var child = $this.children("a"),
                 oldClick = $._data(child.get(0), "events").click[0];
             
-            console.log(oldClick);
-            
             child.off("click")
                 .attr({ "data-toggle": "collapse", "data-target": "#" + id })
                 .on("click", function (e) {

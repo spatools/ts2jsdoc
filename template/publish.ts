@@ -873,26 +873,6 @@ exports.publish = function (taffyData: JSDoc.TaffyDB<JSDoc.Doclet>, opts: any, t
         if (myExternals.length) {
             generate("external", "External: " + myExternals[0].name, myExternals, helper.longnameToUrl[longname]);
         }
-
-        var myEnums = helper.find(enums, { longname: longname });
-        if (myEnums.length) {
-            generate("typedef", "Enums: " + myEnums[0].name, myEnums, helper.longnameToUrl[longname]);
-        }
-
-        var myTypedefs = helper.find(typedefs, { longname: longname });
-        if (myTypedefs.length) {
-            generate("typedef", "Type Definitions: " + myTypedefs[0].name, myTypedefs, helper.longnameToUrl[longname]);
-        }
-
-        var myCallbacks = helper.find(callbacks, { longname: longname });
-        if (myCallbacks.length) {
-            if (longname.indexOf("#") === -1) {
-                generate("callback", "Callbacks: " + myCallbacks[0].name, myCallbacks, helper.longnameToUrl[longname]);
-            }
-            else {
-                generate("callback", "Callbacks: " + myCallbacks[0].name, myCallbacks, longname.split("#")[0]);
-            }
-        }
     });
 
     // TODO: move the tutorial functions to templateHelper.js
