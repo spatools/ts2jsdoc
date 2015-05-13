@@ -1,0 +1,40 @@
+{
+    "plugins": [
+        "../plugin.js",
+        "plugins/markdown"
+    ],
+    "opts": {
+        "readme": "build/node.md",
+        "template": "template"
+    },
+    "typescript": {
+        "target": "ES5",
+        "module": "CommonJS"
+    },
+    "templates": {
+        "systemName": "node.js",
+        "theme": "styles",
+        "navType": "vertical",
+        "inverseNav": true,
+        "tableOfContents": true,
+        "linenums": false,
+        "collapseSymbols": true,
+        "footer": "Generated using default node.d.ts using <strong>ts2jsdoc</strong> project.",
+        "copyright": "Copyright SPATools &copy; 2015 The contributors to the JSDoc3, ts2jsdoc, node.js projects.",
+        "outputSourceFiles": false,
+        "outputSourcePath": false,
+
+        "default": {
+            "staticFiles": {
+                "include": [ "build/node/" ]
+            }
+        }
+    },
+    "source": {
+        "includePattern": "(\\.d)?\\.ts$"
+    },
+    "markdown": {
+        "parser": "gfm",
+        "hardwrap": true
+    }
+}

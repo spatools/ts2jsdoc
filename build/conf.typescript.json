@@ -1,0 +1,34 @@
+{
+    "plugins": [
+        "../plugin.js",
+        "plugins/markdown"
+    ],
+    "opts": {
+        "readme": "node_modules/typescript/README.md",
+        "template": "template"
+    },
+    "typescript": {
+        "target": "ES5",
+        "module":  "CommonJS"
+    },
+    "templates": {
+        "systemName": "typescript",
+        "theme": "default",
+        "navType": "vertical",
+        "inverseNav": true,
+        "tableOfContents": true,
+        "linenums": false,
+        "collapseSymbols": true,
+        "footer": "Generated using default typescript.d.ts using <strong>ts2jsdoc</strong> project.",
+        "copyright": "Copyright SPATools &copy; 2015 The contributors to the JSDoc3, ts2jsdoc, Typescript projects.",
+        "outputSourceFiles": false,
+        "outputSourcePath": false
+    },
+    "source": {
+        "includePattern": "(\\.d)?\\.ts$"
+    },
+    "markdown": {
+        "parser": "gfm",
+        "hardwrap": true
+    }
+}

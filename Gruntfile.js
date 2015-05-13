@@ -18,6 +18,7 @@ module.exports = function (grunt) {
             bin: "bin",
             lib: "lib",
             tmpl: "template",
+            build: "build",
             dist: "dist",
             all: "{<%= paths.bin %>,<%= paths.lib %>,<%= paths.tmpl %>}",
             defs: "typings/_definitions.d.ts",
@@ -47,17 +48,17 @@ module.exports = function (grunt) {
             typescript : {
                 src: ["node_modules/typescript/bin/typescript.d.ts"],
                 dest: "<%= paths.dist %>/typescript",
-                options: { configure: "conf.json" }
+                options: { configure: "<%= paths.build %>/conf.typescript.json" }
             },
             lib : {
                 src: ["node_modules/typescript/bin/lib.d.ts"],
-                dest: "<%= paths.dist %>/typescript",
-                options: { configure: "conf.json" }
+                dest: "<%= paths.dist %>/lib",
+                options: { configure: "<%= paths.build %>/conf.lib.json" }
             },
             node : {
                 src: ["typings/node/node.d.ts"],
                 dest: "<%= paths.dist %>/node",
-                options: { configure: "conf.json" }
+                options: { configure: "<%= paths.build %>/conf.node.json" }
             }
         },
 
@@ -77,6 +78,7 @@ module.exports = function (grunt) {
                 "!<%= paths.tmpl %>/static/**",
                 "!./Gruntfile.js",
             ],
+            dist: "<%= paths.dist %>",
             temp: "<%= paths.temp %>"
         },
         
@@ -120,6 +122,7 @@ module.exports = function (grunt) {
     
     grunt.registerTask("dev", ["tslint:src", "clean:src", "typescript:src"]);
     grunt.registerTask("build", ["tslint:src", "clean:src", "typescript:dist"]);
+    grunt.registerTask("doc", ["clean:dist", "jsdoc:typescript", "jsdoc:node"]);
     
     grunt.registerTask("serve", ["dev", "doc", "connect:dist", "watch"]);
     

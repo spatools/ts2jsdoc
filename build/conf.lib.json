@@ -1,0 +1,34 @@
+{
+    "plugins": [
+        "../plugin.js",
+        "plugins/markdown"
+    ],
+    "opts": {
+        "readme": "build/lib.md",
+        "template": "template"
+    },
+    "typescript": {
+        "target": "ES5",
+        "module":  "CommonJS"
+    },
+    "templates": {
+        "systemName": "lib.d.ts",
+        "theme": "default",
+        "navType": "inline",
+        "inverseNav": false,
+        "tableOfContents": false,
+        "linenums": false,
+        "collapseSymbols": true,
+        "footer": "Generated using default lib.d.ts using <strong>ts2jsdoc</strong> project.",
+        "copyright": "Copyright SPATools &copy; 2015 The contributors to the JSDoc3, ts2jsdoc, Typescript projects.",
+        "outputSourceFiles": false,
+        "outputSourcePath": false
+    },
+    "source": {
+        "includePattern": "(\\.d)?\\.ts$"
+    },
+    "markdown": {
+        "parser": "gfm",
+        "hardwrap": true
+    }
+}
