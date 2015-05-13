@@ -1,5 +1,7 @@
+.git*
 *.ts
 *.d.ts
+build/
 temp/
 out/
 dist/
