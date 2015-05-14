@@ -66,7 +66,7 @@ module.exports = function (grunt) {
             site: {
                 expand: true,
                 cwd: "<%= paths.build %>/site",
-                src: "*/*.*",
+                src: ["*/*.*", "CNAME"],
                 dest: "<%= paths.dist %>"
             }
         },
