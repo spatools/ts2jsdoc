@@ -34,7 +34,7 @@ this.nav.topLevel.forEach(function(entry) {
             <div class="sidebar col-sm-5 col-md-4 col-lg-3">
                 <?js= this.partial('nav/side.tmpl', { nav: this.nav, doc: doc }) ?>
             </div>
-            <div class="col-sm-7 col-md-8 col-lg-9<?js= this.options.tableOfContents ? ' col-sm-offset-5 col-md-offset-4 col-lg-offset-3' : '' ?>">
+            <div class="col-sm-7 col-md-8 col-lg-9 col-sm-offset-5 col-md-offset-4 col-lg-offset-3">
                 <div id="main">
                     <?js= content ?>
                 </div>
