@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>node.js Module: repl</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap-theme.min.css" />
+    
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <header>
+        
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">node.js</a>
+        </div>
+        <div class="collapse navbar-collapse" id="top-menu-collapse">
+            
+                
+<ul class="nav navbar-nav">
+    <li class="">
+        <a href="index.html">Home</a>
+    </li>
+    
+        
+            <li class="">
+                <a href="global.html">Global</a>
+            </li>
+        
+            <li class="active">
+                <a href="modules.list.html">Modules</a>
+            </li>
+        
+            <li class="">
+                <a href="classes.list.html">Classes</a>
+            </li>
+        
+            <li class="">
+                <a href="interfaces.list.html">Interfaces</a>
+            </li>
+        
+            <li class="">
+                <a href="typedef.list.html">Type Definitions</a>
+            </li>
+        
+            <li class="">
+                <a href="callbacks.list.html">Callbacks</a>
+            </li>
+        
+            <li class="">
+                <a href="namespaces.list.html">Namespaces</a>
+            </li>
+        
+    
+</ul>
+            
+            <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control typeahead" placeholder="Search for..." />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+    </header>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="sidebar col-sm-5 col-md-4 col-lg-3">
+                
+
+    
+<aside class="well" role="navigation">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="nav-header">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Global">
+                Global
+                <span class="badge badge-info pull-right">15</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Global" class="collapse" aria-expanded="false">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="global.html#___dirname">___dirname</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#___filename">___filename</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#Buffer">Buffer</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#clearImmediate">clearImmediate</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#clearInterval">clearInterval</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#clearTimeout">clearTimeout</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#exports">exports</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global">global</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#module">module</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#process">process</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#require">require</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#setImmediate">setImmediate</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#setInterval">setInterval</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#setTimeout">setTimeout</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#SlowBuffer">SlowBuffer</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Modules">
+                Modules
+                <span class="badge badge-info pull-right">27</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Modules" class="collapse in" aria-expanded="true">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="module-assert.html">assert</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-buffer.html">buffer</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html">child_process</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-cluster.html">cluster</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.html">crypto</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dgram.html">dgram</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html">dns</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-domain.html">domain</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-events.html">events</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html">fs</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.html">http</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.html">https</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.html">net</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-os.html">os</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-path.html">path</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-punycode.html">punycode</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-querystring.html">querystring</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-readline.html">readline</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-repl.html">repl</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.html">stream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-string_decoder.html">string_decoder</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.html">tls</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tty.html">tty</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-url.html">url</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-util.html">util</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-vm.html">vm</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html">zlib</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Classes">
+                Classes
+                <span class="badge badge-info pull-right">10</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Classes" class="collapse" aria-expanded="false">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="assert.internal.AssertionError.html">assert.internal.AssertionError</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-cluster.Worker.html">cluster.Worker</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-domain.Domain.html">domain.Domain</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-events.EventEmitter.html">events.EventEmitter</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.Agent.html">http.Agent</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.Duplex.html">stream.Duplex</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.PassThrough.html">stream.PassThrough</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.Readable.html">stream.Readable</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.Transform.html">stream.Transform</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.Writable.html">stream.Writable</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Interfaces">
+                Interfaces
+                <span class="badge badge-info pull-right">67</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Interfaces" class="collapse" aria-expanded="false">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="assert.internal.DoesNotThrowType.html">assert.internal.DoesNotThrowType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="assert.internal.ThrowsType.html">assert.internal.ThrowsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="BufferType.html">BufferType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.ChildProcess.html">child_process.ChildProcess</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-cluster.ClusterSettings.html">cluster.ClusterSettings</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Cipher.html">crypto.Cipher</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.CredentialDetails.html">crypto.CredentialDetails</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Credentials.html">crypto.Credentials</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Decipher.html">crypto.Decipher</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.DiffieHellman.html">crypto.DiffieHellman</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Hash.html">crypto.Hash</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Hmac.html">crypto.Hmac</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Signer.html">crypto.Signer</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.Verify.html">crypto.Verify</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dgram.AddressInfo.html">dgram.AddressInfo</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dgram.RemoteInfo.html">dgram.RemoteInfo</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dgram.Socket.html">dgram.Socket</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.FSWatcher.html">fs.FSWatcher</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.ReadStream.html">fs.ReadStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.Stats.html">fs.Stats</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.WriteStream.html">fs.WriteStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.AgentOptions.html">http.AgentOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.ClientRequest.html">http.ClientRequest</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.IncomingMessage.html">http.IncomingMessage</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.Server.html">http.Server</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.ServerRequest.html">http.ServerRequest</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.ServerResponse.html">http.ServerResponse</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.html#.Agent">https.Agent</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.AgentType.html">https.AgentType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.RequestOptions.html">https.RequestOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.ServerOptions.html">https.ServerOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.Server.html">net.Server</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.html#.Socket">net.Socket</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.SocketType.html">net.SocketType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-path.ParsedPath.html">path.ParsedPath</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-punycode.html#.ucs2">punycode.ucs2</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-readline.ReadLine.html">readline.ReadLine</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-readline.ReadLineOptions.html">readline.ReadLineOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-repl.ReplOptions.html">repl.ReplOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.DuplexOptions.html">stream.DuplexOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.ReadableOptions.html">stream.ReadableOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.Stream.html">stream.Stream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-stream.WritableOptions.html">stream.WritableOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-string_decoder.NodeStringDecoder.html">string_decoder.NodeStringDecoder</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-string_decoder.StringDecoderType.html">string_decoder.StringDecoderType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.ClearTextStream.html">tls.ClearTextStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.ConnectionOptions.html">tls.ConnectionOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.SecurePair.html">tls.SecurePair</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.Server.html">tls.Server</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.TlsOptions.html">tls.TlsOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tty.ReadStream.html">tty.ReadStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tty.WriteStream.html">tty.WriteStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-url.Url.html">url.Url</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-url.UrlOptions.html">url.UrlOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-util.InspectOptions.html">util.InspectOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-vm.Script.html">vm.Script</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.ZlibOptions.html">zlib.ZlibOptions</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeBuffer.html">NodeBuffer</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.ErrnoException.html">NodeJS.ErrnoException</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.EventEmitter.html">NodeJS.EventEmitter</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html">NodeJS.Global</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Process.html">NodeJS.Process</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.ReadableStream.html">NodeJS.ReadableStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Timer.html">NodeJS.Timer</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.WritableStream.html">NodeJS.WritableStream</a>
+                    </li>
+                    
+                    <li>
+                        <a href="RequireType.html">RequireType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="SlowBufferType.html">SlowBufferType</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Type-Definitions">
+                Type Definitions
+                <span class="badge badge-info pull-right">44</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Type-Definitions" class="collapse" aria-expanded="false">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="assert.internal.AssertionError.html#.ConstructOptionsType">assert.internal.AssertionError.ConstructOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http.Server.html#.AddressReturnsType">http.Server.AddressReturnsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ExecFileOptionsType">child_process.ExecFileOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ExecFileSyncOptionsType">child_process.ExecFileSyncOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ExecOptionsType">child_process.ExecOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ExecSyncOptionsType">child_process.ExecSyncOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ForkOptionsType">child_process.ForkOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.SpawnOptionsType">child_process.SpawnOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.AppendFileOptionsType">fs.AppendFileOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.AppendFileSyncOptionsType">fs.AppendFileSyncOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.CreateReadStreamOptionsType">fs.CreateReadStreamOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.CreateWriteStreamOptionsType">fs.CreateWriteStreamOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ReadFileOptionsType">fs.ReadFileOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ReadFileSyncOptionsType">fs.ReadFileSyncOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.RealpathCacheType">fs.RealpathCacheType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.RealpathSyncCacheType">fs.RealpathSyncCacheType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WatchFileOptionsType">fs.WatchFileOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WatchOptionsType">fs.WatchOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WriteFileOptionsType">fs.WriteFileOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WriteFileSyncOptionsType">fs.WriteFileSyncOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.html#.STATUS_CODESType">http.STATUS_CODESType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.html#.ConnectOptionsType">net.ConnectOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.html#.CreateConnectionOptionsType">net.CreateConnectionOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.html#.CreateServerOptionsType">net.CreateServerOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.SocketType.html#.ConstructOptionsType">net.SocketType.ConstructOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-os.html#.CpusReturnsType">os.CpusReturnsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-os.html#.CpusReturnsType#.TimesType">os.CpusReturnsType.TimesType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-querystring.html#.ParseOptionsType">querystring.ParseOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#ModuleType">ModuleType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="net.Server.html#.AddressReturnsType">net.Server.AddressReturnsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="net.Socket.html#.AddressReturnsType">net.Socket.AddressReturnsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Process.html#.ConfigType">NodeJS.Process.ConfigType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Process.html#.ConfigType#.Target_defaultsType">NodeJS.Process.ConfigType.Target_defaultsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Process.html#.ConfigType#.VariablesType">NodeJS.Process.ConfigType.VariablesType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Process.html#.MemoryUsageReturnsType">NodeJS.Process.MemoryUsageReturnsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Process.html#.VersionsType">NodeJS.Process.VersionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.ReadableStream.html#.PipeOptionsType">NodeJS.ReadableStream.PipeOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="stream.Readable.html#.PipeOptionsType">stream.Readable.PipeOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="stream.Stream.html#.PipeOptionsType">stream.Stream.PipeOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="stream.Transform.html#.PipeOptionsType">stream.Transform.PipeOptionsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="tls.ClearTextStream.html#.AddressType">tls.ClearTextStream.AddressType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="tls.ClearTextStream.html#.GetCipherType">tls.ClearTextStream.GetCipherType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="tls.Server.html#.AddContextCredentialsType">tls.Server.AddContextCredentialsType</a>
+                    </li>
+                    
+                    <li>
+                        <a href="tls.Server.html#.AddressReturnsType">tls.Server.AddressReturnsType</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Callbacks">
+                Callbacks
+                <span class="badge badge-info pull-right">88</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Callbacks" class="collapse" aria-expanded="false">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="assert.internal.DoesNotThrowType.html#.CallErrorCallback">assert.internal.DoesNotThrowType.CallErrorCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="assert.internal.ThrowsType.html#.CallErrorCallback">assert.internal.ThrowsType.CallErrorCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="dgram.Socket.html#.BindCallbackCallback">dgram.Socket.BindCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="dgram.Socket.html#.SendCallbackCallback">dgram.Socket.SendCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="domain.Domain.html#.BindCbCallback">domain.Domain.BindCbCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="domain.Domain.html#.InterceptCbCallback">domain.Domain.InterceptCbCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https.ServerOptions.html#.SNICallbackCallback">https.ServerOptions.SNICallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ExecCallbackCallback">child_process.ExecCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-child_process.html#.ExecFileCallbackCallback">child_process.ExecFileCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.html#.Pbkdf2CallbackCallback">crypto.Pbkdf2CallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.html#.PseudoRandomBytesCallbackCallback">crypto.PseudoRandomBytesCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-crypto.html#.RandomBytesCallbackCallback">crypto.RandomBytesCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dgram.html#.CreateSocketCallbackCallback">dgram.CreateSocketCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.LookupCallbackCallback">dns.LookupCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.Resolve4CallbackCallback">dns.Resolve4CallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.Resolve6CallbackCallback">dns.Resolve6CallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ResolveCallbackCallback">dns.ResolveCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ResolveCnameCallbackCallback">dns.ResolveCnameCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ResolveMxCallbackCallback">dns.ResolveMxCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ResolveNsCallbackCallback">dns.ResolveNsCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ResolveSrvCallbackCallback">dns.ResolveSrvCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ResolveTxtCallbackCallback">dns.ResolveTxtCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-dns.html#.ReverseCallbackCallback">dns.ReverseCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.AppendFileCallbackCallback">fs.AppendFileCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ChmodCallbackCallback">fs.ChmodCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ChownCallbackCallback">fs.ChownCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.CloseCallbackCallback">fs.CloseCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ExistsCallbackCallback">fs.ExistsCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.FchmodCallbackCallback">fs.FchmodCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.FchownCallbackCallback">fs.FchownCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.FstatCallbackCallback">fs.FstatCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.FsyncCallbackCallback">fs.FsyncCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.FtruncateCallbackCallback">fs.FtruncateCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.FutimesCallbackCallback">fs.FutimesCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.LchmodCallbackCallback">fs.LchmodCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.LchownCallbackCallback">fs.LchownCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.LinkCallbackCallback">fs.LinkCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.LstatCallbackCallback">fs.LstatCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.MkdirCallbackCallback">fs.MkdirCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.OpenCallbackCallback">fs.OpenCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ReadCallbackCallback">fs.ReadCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ReaddirCallbackCallback">fs.ReaddirCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ReadFileCallbackCallback">fs.ReadFileCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.ReadlinkCallbackCallback">fs.ReadlinkCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.RealpathCallbackCallback">fs.RealpathCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.RenameCallbackCallback">fs.RenameCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.RmdirCallbackCallback">fs.RmdirCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.StatCallbackCallback">fs.StatCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.SymlinkCallbackCallback">fs.SymlinkCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.TruncateCallbackCallback">fs.TruncateCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.UnlinkCallbackCallback">fs.UnlinkCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.UnwatchFileListenerCallback">fs.UnwatchFileListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.UtimesCallbackCallback">fs.UtimesCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WatchFileListenerCallback">fs.WatchFileListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WatchListenerCallback">fs.WatchListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WriteCallbackCallback">fs.WriteCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-fs.html#.WriteFileCallbackCallback">fs.WriteFileCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.html#.CreateServerRequestListenerCallback">http.CreateServerRequestListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.html#.GetCallbackCallback">http.GetCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-http.html#.RequestCallbackCallback">http.RequestCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.html#.GetCallbackCallback">https.GetCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-https.html#.RequestCallbackCallback">https.RequestCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-net.html#.CreateServerConnectionListenerCallback">net.CreateServerConnectionListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.html#.ConnectSecureConnectionListenerCallback">tls.ConnectSecureConnectionListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.html#.ConnectSecureConnectListenerCallback">tls.ConnectSecureConnectListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-tls.html#.CreateServerSecureConnectionListenerCallback">tls.CreateServerSecureConnectionListenerCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.DeflateCallbackCallback">zlib.DeflateCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.DeflateRawCallbackCallback">zlib.DeflateRawCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.GunzipCallbackCallback">zlib.GunzipCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.GzipCallbackCallback">zlib.GzipCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.InflateCallbackCallback">zlib.InflateCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.InflateRawCallbackCallback">zlib.InflateRawCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-zlib.html#.UnzipCallbackCallback">zlib.UnzipCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.ClearImmediateCallback">NodeJS.Global.ClearImmediateCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.ClearIntervalCallback">NodeJS.Global.ClearIntervalCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.ClearTimeoutCallback">NodeJS.Global.ClearTimeoutCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.EscapeCallback">NodeJS.Global.EscapeCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.SetImmediateCallback">NodeJS.Global.SetImmediateCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.SetImmediateCallbackCallbackCallback">NodeJS.Global.SetImmediateCallbackCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.SetIntervalCallback">NodeJS.Global.SetIntervalCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.SetIntervalCallbackCallbackCallback">NodeJS.Global.SetIntervalCallbackCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.SetTimeoutCallback">NodeJS.Global.SetTimeoutCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.SetTimeoutCallbackCallbackCallback">NodeJS.Global.SetTimeoutCallbackCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.Global.html#.UnescapeCallback">NodeJS.Global.UnescapeCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#SetImmediateCallbackCallback">SetImmediateCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#SetIntervalCallbackCallback">SetIntervalCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="global.html#global#SetTimeoutCallbackCallback">SetTimeoutCallbackCallback</a>
+                    </li>
+                    
+                    <li>
+                        <a href="tls.TlsOptions.html#.SNICallbackCallback">tls.TlsOptions.SNICallbackCallback</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+        <li class="nav-header">
+            <a data-toggle="collapse" data-target="#menu-left-collapse-Namespaces">
+                Namespaces
+                <span class="badge badge-info pull-right">4</span>
+            </a>
+        </li>
+        <li>
+            <div id="menu-left-collapse-Namespaces" class="collapse" aria-expanded="false">
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="module-assert.html#.internal">assert.internal</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-path.posix.html">path.posix</a>
+                    </li>
+                    
+                    <li>
+                        <a href="module-path.win32.html">path.win32</a>
+                    </li>
+                    
+                    <li>
+                        <a href="NodeJS.html">NodeJS</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </li>
+        
+    </ul>
+</aside>
+
+
+            </div>
+            <div class="col-sm-7 col-md-8 col-lg-9">
+                <div id="main">
+                    
+
+
+<div class="page-header">
+    <h1>
+        Module
+        <!-- remove whitespaces
+     --><span class="type-name">repl</span><!-- remove whitespaces
+     -->
+        
+    </h1>
+</div>
+<section>
+
+<header>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+        
+
+        
+    
+    </div>
+
+   
+
+    
+
+    
+
+    
+
+    
+
+
+    
+        <h2 class="subsection-title">Interfaces</h2>
+
+        <dl>
+            <dt><a href="module-repl.ReplOptions.html">ReplOptions</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+    
+    
+
+    
+
+    
+        <h2 class="subsection-title">Methods</h2>
+
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-start">
+        <a name=".start"></a>
+
+        <h3 class="panel-title name" id="start">
+            <span class="type-attributes"><span class="label label-default" title="static">S</span><span class="label label-success" title="public method">M</span></span> <span class="signature-name">start</span><span class="signature">(<span class="signature-param">options</span>: <span class="type-signature text-info"><a href="repl.ReplOptions.html">repl.ReplOptions</a></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info"><a href="events.EventEmitter.html">events.EventEmitter</a></span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-start" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="repl.ReplOptions.html">repl.ReplOptions</a></span>
+    
+
+
+                </td>
+            
+
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> node.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info"><a href="events.EventEmitter.html">events.EventEmitter</a></span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> node.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+</article>
+
+</section>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        
+        <p>Generated using default node.d.ts using <strong>ts2jsdoc</strong> project.</p>
+        
+        
+        <p class="copyright">Copyright SPATools &copy; 2015 The contributors to the JSDoc3, ts2jsdoc, node.js projects.</p>
+        
+        <p class="jsdoc-message">
+            Documentation generated by
+            <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta3</a>
+            on 2015-05-14 00:51:06.980
+            using the <a href="https://github.com/spatools/ts2jsdoc">ts2jsdoc template</a>.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    
+
+    <script>
+        var searchMembers = [{"name":"___dirname","longname":"___dirname","link":"<a href=\"global.html#___dirname\">___dirname</a>"},{"name":"___filename","longname":"___filename","link":"<a href=\"global.html#___filename\">___filename</a>"},{"name":"Buffer","longname":"Buffer","link":"<a href=\"global.html#Buffer\">Buffer</a>"},{"name":"clearImmediate","longname":"clearImmediate","link":"<a href=\"global.html#clearImmediate\">clearImmediate</a>"},{"name":"clearInterval","longname":"clearInterval","link":"<a href=\"global.html#clearInterval\">clearInterval</a>"},{"name":"clearTimeout","longname":"clearTimeout","link":"<a href=\"global.html#clearTimeout\">clearTimeout</a>"},{"name":"exports","longname":"exports","link":"<a href=\"global.html#exports\">exports</a>"},{"name":"global","longname":"global","link":"<a href=\"global.html#global\">global</a>"},{"name":"module","longname":"module","link":"<a href=\"global.html#global#module\">module</a>"},{"name":"process","longname":"process","link":"<a href=\"global.html#global#process\">process</a>"},{"name":"require","longname":"require","link":"<a href=\"global.html#global#require\">require</a>"},{"name":"setImmediate","longname":"setImmediate","link":"<a href=\"global.html#global#setImmediate\">setImmediate</a>"},{"name":"setInterval","longname":"setInterval","link":"<a href=\"global.html#global#setInterval\">setInterval</a>"},{"name":"setTimeout","longname":"setTimeout","link":"<a href=\"global.html#global#setTimeout\">setTimeout</a>"},{"name":"SlowBuffer","longname":"SlowBuffer","link":"<a href=\"global.html#global#SlowBuffer\">SlowBuffer</a>"},{"name":"assert","longname":"module:assert","link":"<a href=\"module-assert.html\">assert</a>"},{"name":"buffer","longname":"module:buffer","link":"<a href=\"module-buffer.html\">buffer</a>"},{"name":"child_process","longname":"module:child_process","link":"<a href=\"module-child_process.html\">child_process</a>"},{"name":"cluster","longname":"module:cluster","link":"<a href=\"module-cluster.html\">cluster</a>"},{"name":"crypto","longname":"module:crypto","link":"<a href=\"module-crypto.html\">crypto</a>"},{"name":"dgram","longname":"module:dgram","link":"<a href=\"module-dgram.html\">dgram</a>"},{"name":"dns","longname":"module:dns","link":"<a href=\"module-dns.html\">dns</a>"},{"name":"domain","longname":"module:domain","link":"<a href=\"module-domain.html\">domain</a>"},{"name":"events","longname":"module:events","link":"<a href=\"module-events.html\">events</a>"},{"name":"fs","longname":"module:fs","link":"<a href=\"module-fs.html\">fs</a>"},{"name":"http","longname":"module:http","link":"<a href=\"module-http.html\">http</a>"},{"name":"https","longname":"module:https","link":"<a href=\"module-https.html\">https</a>"},{"name":"net","longname":"module:net","link":"<a href=\"module-net.html\">net</a>"},{"name":"os","longname":"module:os","link":"<a href=\"module-os.html\">os</a>"},{"name":"path","longname":"module:path","link":"<a href=\"module-path.html\">path</a>"},{"name":"punycode","longname":"module:punycode","link":"<a href=\"module-punycode.html\">punycode</a>"},{"name":"querystring","longname":"module:querystring","link":"<a href=\"module-querystring.html\">querystring</a>"},{"name":"readline","longname":"module:readline","link":"<a href=\"module-readline.html\">readline</a>"},{"name":"repl","longname":"module:repl","link":"<a href=\"module-repl.html\">repl</a>"},{"name":"stream","longname":"module:stream","link":"<a href=\"module-stream.html\">stream</a>"},{"name":"string_decoder","longname":"module:string_decoder","link":"<a href=\"module-string_decoder.html\">string_decoder</a>"},{"name":"tls","longname":"module:tls","link":"<a href=\"module-tls.html\">tls</a>"},{"name":"tty","longname":"module:tty","link":"<a href=\"module-tty.html\">tty</a>"},{"name":"url","longname":"module:url","link":"<a href=\"module-url.html\">url</a>"},{"name":"util","longname":"module:util","link":"<a href=\"module-util.html\">util</a>"},{"name":"vm","longname":"module:vm","link":"<a href=\"module-vm.html\">vm</a>"},{"name":"zlib","longname":"module:zlib","link":"<a href=\"module-zlib.html\">zlib</a>"},{"name":"AssertionError","longname":"assert.internal.AssertionError","link":"<a href=\"assert.internal.AssertionError.html\">assert.internal.AssertionError</a>"},{"name":"Worker","longname":"module:cluster.Worker","link":"<a href=\"module-cluster.Worker.html\">cluster.Worker</a>"},{"name":"Domain","longname":"module:domain.Domain","link":"<a href=\"module-domain.Domain.html\">domain.Domain</a>"},{"name":"EventEmitter","longname":"module:events.EventEmitter","link":"<a href=\"module-events.EventEmitter.html\">events.EventEmitter</a>"},{"name":"Agent","longname":"module:http.Agent","link":"<a href=\"module-http.Agent.html\">http.Agent</a>"},{"name":"Duplex","longname":"module:stream.Duplex","link":"<a href=\"module-stream.Duplex.html\">stream.Duplex</a>"},{"name":"PassThrough","longname":"module:stream.PassThrough","link":"<a href=\"module-stream.PassThrough.html\">stream.PassThrough</a>"},{"name":"Readable","longname":"module:stream.Readable","link":"<a href=\"module-stream.Readable.html\">stream.Readable</a>"},{"name":"Transform","longname":"module:stream.Transform","link":"<a href=\"module-stream.Transform.html\">stream.Transform</a>"},{"name":"Writable","longname":"module:stream.Writable","link":"<a href=\"module-stream.Writable.html\">stream.Writable</a>"},{"name":"DoesNotThrowType","longname":"assert.internal.DoesNotThrowType","link":"<a href=\"assert.internal.DoesNotThrowType.html\">assert.internal.DoesNotThrowType</a>"},{"name":"ThrowsType","longname":"assert.internal.ThrowsType","link":"<a href=\"assert.internal.ThrowsType.html\">assert.internal.ThrowsType</a>"},{"name":"BufferType","longname":"BufferType","link":"<a href=\"BufferType.html\">BufferType</a>"},{"name":"ChildProcess","longname":"module:child_process.ChildProcess","link":"<a href=\"module-child_process.ChildProcess.html\">child_process.ChildProcess</a>"},{"name":"ClusterSettings","longname":"module:cluster.ClusterSettings","link":"<a href=\"module-cluster.ClusterSettings.html\">cluster.ClusterSettings</a>"},{"name":"Cipher","longname":"module:crypto.Cipher","link":"<a href=\"module-crypto.Cipher.html\">crypto.Cipher</a>"},{"name":"CredentialDetails","longname":"module:crypto.CredentialDetails","link":"<a href=\"module-crypto.CredentialDetails.html\">crypto.CredentialDetails</a>"},{"name":"Credentials","longname":"module:crypto.Credentials","link":"<a href=\"module-crypto.Credentials.html\">crypto.Credentials</a>"},{"name":"Decipher","longname":"module:crypto.Decipher","link":"<a href=\"module-crypto.Decipher.html\">crypto.Decipher</a>"},{"name":"DiffieHellman","longname":"module:crypto.DiffieHellman","link":"<a href=\"module-crypto.DiffieHellman.html\">crypto.DiffieHellman</a>"},{"name":"Hash","longname":"module:crypto.Hash","link":"<a href=\"module-crypto.Hash.html\">crypto.Hash</a>"},{"name":"Hmac","longname":"module:crypto.Hmac","link":"<a href=\"module-crypto.Hmac.html\">crypto.Hmac</a>"},{"name":"Signer","longname":"module:crypto.Signer","link":"<a href=\"module-crypto.Signer.html\">crypto.Signer</a>"},{"name":"Verify","longname":"module:crypto.Verify","link":"<a href=\"module-crypto.Verify.html\">crypto.Verify</a>"},{"name":"AddressInfo","longname":"module:dgram.AddressInfo","link":"<a href=\"module-dgram.AddressInfo.html\">dgram.AddressInfo</a>"},{"name":"RemoteInfo","longname":"module:dgram.RemoteInfo","link":"<a href=\"module-dgram.RemoteInfo.html\">dgram.RemoteInfo</a>"},{"name":"Socket","longname":"module:dgram.Socket","link":"<a href=\"module-dgram.Socket.html\">dgram.Socket</a>"},{"name":"FSWatcher","longname":"module:fs.FSWatcher","link":"<a href=\"module-fs.FSWatcher.html\">fs.FSWatcher</a>"},{"name":"ReadStream","longname":"module:fs.ReadStream","link":"<a href=\"module-fs.ReadStream.html\">fs.ReadStream</a>"},{"name":"Stats","longname":"module:fs.Stats","link":"<a href=\"module-fs.Stats.html\">fs.Stats</a>"},{"name":"WriteStream","longname":"module:fs.WriteStream","link":"<a href=\"module-fs.WriteStream.html\">fs.WriteStream</a>"},{"name":"AgentOptions","longname":"module:http.AgentOptions","link":"<a href=\"module-http.AgentOptions.html\">http.AgentOptions</a>"},{"name":"ClientRequest","longname":"module:http.ClientRequest","link":"<a href=\"module-http.ClientRequest.html\">http.ClientRequest</a>"},{"name":"IncomingMessage","longname":"module:http.IncomingMessage","link":"<a href=\"module-http.IncomingMessage.html\">http.IncomingMessage</a>"},{"name":"Server","longname":"module:http.Server","link":"<a href=\"module-http.Server.html\">http.Server</a>"},{"name":"ServerRequest","longname":"module:http.ServerRequest","link":"<a href=\"module-http.ServerRequest.html\">http.ServerRequest</a>"},{"name":"ServerResponse","longname":"module:http.ServerResponse","link":"<a href=\"module-http.ServerResponse.html\">http.ServerResponse</a>"},{"name":"Agent","longname":"module:https.Agent","link":"<a href=\"module-https.html#.Agent\">https.Agent</a>"},{"name":"AgentType","longname":"module:https.AgentType","link":"<a href=\"module-https.AgentType.html\">https.AgentType</a>"},{"name":"RequestOptions","longname":"module:https.RequestOptions","link":"<a href=\"module-https.RequestOptions.html\">https.RequestOptions</a>"},{"name":"ServerOptions","longname":"module:https.ServerOptions","link":"<a href=\"module-https.ServerOptions.html\">https.ServerOptions</a>"},{"name":"Server","longname":"module:net.Server","link":"<a href=\"module-net.Server.html\">net.Server</a>"},{"name":"Socket","longname":"module:net.Socket","link":"<a href=\"module-net.html#.Socket\">net.Socket</a>"},{"name":"SocketType","longname":"module:net.SocketType","link":"<a href=\"module-net.SocketType.html\">net.SocketType</a>"},{"name":"ParsedPath","longname":"module:path.ParsedPath","link":"<a href=\"module-path.ParsedPath.html\">path.ParsedPath</a>"},{"name":"ucs2","longname":"module:punycode.ucs2","link":"<a href=\"module-punycode.html#.ucs2\">punycode.ucs2</a>"},{"name":"ReadLine","longname":"module:readline.ReadLine","link":"<a href=\"module-readline.ReadLine.html\">readline.ReadLine</a>"},{"name":"ReadLineOptions","longname":"module:readline.ReadLineOptions","link":"<a href=\"module-readline.ReadLineOptions.html\">readline.ReadLineOptions</a>"},{"name":"ReplOptions","longname":"module:repl.ReplOptions","link":"<a href=\"module-repl.ReplOptions.html\">repl.ReplOptions</a>"},{"name":"DuplexOptions","longname":"module:stream.DuplexOptions","link":"<a href=\"module-stream.DuplexOptions.html\">stream.DuplexOptions</a>"},{"name":"ReadableOptions","longname":"module:stream.ReadableOptions","link":"<a href=\"module-stream.ReadableOptions.html\">stream.ReadableOptions</a>"},{"name":"Stream","longname":"module:stream.Stream","link":"<a href=\"module-stream.Stream.html\">stream.Stream</a>"},{"name":"WritableOptions","longname":"module:stream.WritableOptions","link":"<a href=\"module-stream.WritableOptions.html\">stream.WritableOptions</a>"},{"name":"NodeStringDecoder","longname":"module:string_decoder.NodeStringDecoder","link":"<a href=\"module-string_decoder.NodeStringDecoder.html\">string_decoder.NodeStringDecoder</a>"},{"name":"StringDecoderType","longname":"module:string_decoder.StringDecoderType","link":"<a href=\"module-string_decoder.StringDecoderType.html\">string_decoder.StringDecoderType</a>"},{"name":"ClearTextStream","longname":"module:tls.ClearTextStream","link":"<a href=\"module-tls.ClearTextStream.html\">tls.ClearTextStream</a>"},{"name":"ConnectionOptions","longname":"module:tls.ConnectionOptions","link":"<a href=\"module-tls.ConnectionOptions.html\">tls.ConnectionOptions</a>"},{"name":"SecurePair","longname":"module:tls.SecurePair","link":"<a href=\"module-tls.SecurePair.html\">tls.SecurePair</a>"},{"name":"Server","longname":"module:tls.Server","link":"<a href=\"module-tls.Server.html\">tls.Server</a>"},{"name":"TlsOptions","longname":"module:tls.TlsOptions","link":"<a href=\"module-tls.TlsOptions.html\">tls.TlsOptions</a>"},{"name":"ReadStream","longname":"module:tty.ReadStream","link":"<a href=\"module-tty.ReadStream.html\">tty.ReadStream</a>"},{"name":"WriteStream","longname":"module:tty.WriteStream","link":"<a href=\"module-tty.WriteStream.html\">tty.WriteStream</a>"},{"name":"Url","longname":"module:url.Url","link":"<a href=\"module-url.Url.html\">url.Url</a>"},{"name":"UrlOptions","longname":"module:url.UrlOptions","link":"<a href=\"module-url.UrlOptions.html\">url.UrlOptions</a>"},{"name":"InspectOptions","longname":"module:util.InspectOptions","link":"<a href=\"module-util.InspectOptions.html\">util.InspectOptions</a>"},{"name":"Script","longname":"module:vm.Script","link":"<a href=\"module-vm.Script.html\">vm.Script</a>"},{"name":"ZlibOptions","longname":"module:zlib.ZlibOptions","link":"<a href=\"module-zlib.ZlibOptions.html\">zlib.ZlibOptions</a>"},{"name":"NodeBuffer","longname":"NodeBuffer","link":"<a href=\"NodeBuffer.html\">NodeBuffer</a>"},{"name":"ErrnoException","longname":"NodeJS.ErrnoException","link":"<a href=\"NodeJS.ErrnoException.html\">NodeJS.ErrnoException</a>"},{"name":"EventEmitter","longname":"NodeJS.EventEmitter","link":"<a href=\"NodeJS.EventEmitter.html\">NodeJS.EventEmitter</a>"},{"name":"Global","longname":"NodeJS.Global","link":"<a href=\"NodeJS.Global.html\">NodeJS.Global</a>"},{"name":"Process","longname":"NodeJS.Process","link":"<a href=\"NodeJS.Process.html\">NodeJS.Process</a>"},{"name":"ReadableStream","longname":"NodeJS.ReadableStream","link":"<a href=\"NodeJS.ReadableStream.html\">NodeJS.ReadableStream</a>"},{"name":"Timer","longname":"NodeJS.Timer","link":"<a href=\"NodeJS.Timer.html\">NodeJS.Timer</a>"},{"name":"WritableStream","longname":"NodeJS.WritableStream","link":"<a href=\"NodeJS.WritableStream.html\">NodeJS.WritableStream</a>"},{"name":"RequireType","longname":"RequireType","link":"<a href=\"RequireType.html\">RequireType</a>"},{"name":"SlowBufferType","longname":"SlowBufferType","link":"<a href=\"SlowBufferType.html\">SlowBufferType</a>"},{"name":"ConstructOptionsType","longname":"assert.internal.AssertionError.ConstructOptionsType","link":"<a href=\"assert.internal.AssertionError.html#.ConstructOptionsType\">assert.internal.AssertionError.ConstructOptionsType</a>"},{"name":"AddressReturnsType","longname":"http.Server.AddressReturnsType","link":"<a href=\"http.Server.html#.AddressReturnsType\">http.Server.AddressReturnsType</a>"},{"name":"ExecFileOptionsType","longname":"module:child_process.ExecFileOptionsType","link":"<a href=\"module-child_process.html#.ExecFileOptionsType\">child_process.ExecFileOptionsType</a>"},{"name":"ExecFileSyncOptionsType","longname":"module:child_process.ExecFileSyncOptionsType","link":"<a href=\"module-child_process.html#.ExecFileSyncOptionsType\">child_process.ExecFileSyncOptionsType</a>"},{"name":"ExecOptionsType","longname":"module:child_process.ExecOptionsType","link":"<a href=\"module-child_process.html#.ExecOptionsType\">child_process.ExecOptionsType</a>"},{"name":"ExecSyncOptionsType","longname":"module:child_process.ExecSyncOptionsType","link":"<a href=\"module-child_process.html#.ExecSyncOptionsType\">child_process.ExecSyncOptionsType</a>"},{"name":"ForkOptionsType","longname":"module:child_process.ForkOptionsType","link":"<a href=\"module-child_process.html#.ForkOptionsType\">child_process.ForkOptionsType</a>"},{"name":"SpawnOptionsType","longname":"module:child_process.SpawnOptionsType","link":"<a href=\"module-child_process.html#.SpawnOptionsType\">child_process.SpawnOptionsType</a>"},{"name":"AppendFileOptionsType","longname":"module:fs.AppendFileOptionsType","link":"<a href=\"module-fs.html#.AppendFileOptionsType\">fs.AppendFileOptionsType</a>"},{"name":"AppendFileSyncOptionsType","longname":"module:fs.AppendFileSyncOptionsType","link":"<a href=\"module-fs.html#.AppendFileSyncOptionsType\">fs.AppendFileSyncOptionsType</a>"},{"name":"CreateReadStreamOptionsType","longname":"module:fs.CreateReadStreamOptionsType","link":"<a href=\"module-fs.html#.CreateReadStreamOptionsType\">fs.CreateReadStreamOptionsType</a>"},{"name":"CreateWriteStreamOptionsType","longname":"module:fs.CreateWriteStreamOptionsType","link":"<a href=\"module-fs.html#.CreateWriteStreamOptionsType\">fs.CreateWriteStreamOptionsType</a>"},{"name":"ReadFileOptionsType","longname":"module:fs.ReadFileOptionsType","link":"<a href=\"module-fs.html#.ReadFileOptionsType\">fs.ReadFileOptionsType</a>"},{"name":"ReadFileSyncOptionsType","longname":"module:fs.ReadFileSyncOptionsType","link":"<a href=\"module-fs.html#.ReadFileSyncOptionsType\">fs.ReadFileSyncOptionsType</a>"},{"name":"RealpathCacheType","longname":"module:fs.RealpathCacheType","link":"<a href=\"module-fs.html#.RealpathCacheType\">fs.RealpathCacheType</a>"},{"name":"RealpathSyncCacheType","longname":"module:fs.RealpathSyncCacheType","link":"<a href=\"module-fs.html#.RealpathSyncCacheType\">fs.RealpathSyncCacheType</a>"},{"name":"WatchFileOptionsType","longname":"module:fs.WatchFileOptionsType","link":"<a href=\"module-fs.html#.WatchFileOptionsType\">fs.WatchFileOptionsType</a>"},{"name":"WatchOptionsType","longname":"module:fs.WatchOptionsType","link":"<a href=\"module-fs.html#.WatchOptionsType\">fs.WatchOptionsType</a>"},{"name":"WriteFileOptionsType","longname":"module:fs.WriteFileOptionsType","link":"<a href=\"module-fs.html#.WriteFileOptionsType\">fs.WriteFileOptionsType</a>"},{"name":"WriteFileSyncOptionsType","longname":"module:fs.WriteFileSyncOptionsType","link":"<a href=\"module-fs.html#.WriteFileSyncOptionsType\">fs.WriteFileSyncOptionsType</a>"},{"name":"STATUS_CODESType","longname":"module:http.STATUS_CODESType","link":"<a href=\"module-http.html#.STATUS_CODESType\">http.STATUS_CODESType</a>"},{"name":"ConnectOptionsType","longname":"module:net.ConnectOptionsType","link":"<a href=\"module-net.html#.ConnectOptionsType\">net.ConnectOptionsType</a>"},{"name":"CreateConnectionOptionsType","longname":"module:net.CreateConnectionOptionsType","link":"<a href=\"module-net.html#.CreateConnectionOptionsType\">net.CreateConnectionOptionsType</a>"},{"name":"CreateServerOptionsType","longname":"module:net.CreateServerOptionsType","link":"<a href=\"module-net.html#.CreateServerOptionsType\">net.CreateServerOptionsType</a>"},{"name":"ConstructOptionsType","longname":"module:net.SocketType.ConstructOptionsType","link":"<a href=\"module-net.SocketType.html#.ConstructOptionsType\">net.SocketType.ConstructOptionsType</a>"},{"name":"CpusReturnsType","longname":"module:os.CpusReturnsType","link":"<a href=\"module-os.html#.CpusReturnsType\">os.CpusReturnsType</a>"},{"name":"TimesType","longname":"module:os.CpusReturnsType.TimesType","link":"<a href=\"module-os.html#.CpusReturnsType#.TimesType\">os.CpusReturnsType.TimesType</a>"},{"name":"ParseOptionsType","longname":"module:querystring.ParseOptionsType","link":"<a href=\"module-querystring.html#.ParseOptionsType\">querystring.ParseOptionsType</a>"},{"name":"ModuleType","longname":"ModuleType","link":"<a href=\"global.html#global#ModuleType\">ModuleType</a>"},{"name":"AddressReturnsType","longname":"net.Server.AddressReturnsType","link":"<a href=\"net.Server.html#.AddressReturnsType\">net.Server.AddressReturnsType</a>"},{"name":"AddressReturnsType","longname":"net.Socket.AddressReturnsType","link":"<a href=\"net.Socket.html#.AddressReturnsType\">net.Socket.AddressReturnsType</a>"},{"name":"ConfigType","longname":"NodeJS.Process.ConfigType","link":"<a href=\"NodeJS.Process.html#.ConfigType\">NodeJS.Process.ConfigType</a>"},{"name":"Target_defaultsType","longname":"NodeJS.Process.ConfigType.Target_defaultsType","link":"<a href=\"NodeJS.Process.html#.ConfigType#.Target_defaultsType\">NodeJS.Process.ConfigType.Target_defaultsType</a>"},{"name":"VariablesType","longname":"NodeJS.Process.ConfigType.VariablesType","link":"<a href=\"NodeJS.Process.html#.ConfigType#.VariablesType\">NodeJS.Process.ConfigType.VariablesType</a>"},{"name":"MemoryUsageReturnsType","longname":"NodeJS.Process.MemoryUsageReturnsType","link":"<a href=\"NodeJS.Process.html#.MemoryUsageReturnsType\">NodeJS.Process.MemoryUsageReturnsType</a>"},{"name":"VersionsType","longname":"NodeJS.Process.VersionsType","link":"<a href=\"NodeJS.Process.html#.VersionsType\">NodeJS.Process.VersionsType</a>"},{"name":"PipeOptionsType","longname":"NodeJS.ReadableStream.PipeOptionsType","link":"<a href=\"NodeJS.ReadableStream.html#.PipeOptionsType\">NodeJS.ReadableStream.PipeOptionsType</a>"},{"name":"PipeOptionsType","longname":"stream.Readable.PipeOptionsType","link":"<a href=\"stream.Readable.html#.PipeOptionsType\">stream.Readable.PipeOptionsType</a>"},{"name":"PipeOptionsType","longname":"stream.Stream.PipeOptionsType","link":"<a href=\"stream.Stream.html#.PipeOptionsType\">stream.Stream.PipeOptionsType</a>"},{"name":"PipeOptionsType","longname":"stream.Transform.PipeOptionsType","link":"<a href=\"stream.Transform.html#.PipeOptionsType\">stream.Transform.PipeOptionsType</a>"},{"name":"AddressType","longname":"tls.ClearTextStream.AddressType","link":"<a href=\"tls.ClearTextStream.html#.AddressType\">tls.ClearTextStream.AddressType</a>"},{"name":"GetCipherType","longname":"tls.ClearTextStream.GetCipherType","link":"<a href=\"tls.ClearTextStream.html#.GetCipherType\">tls.ClearTextStream.GetCipherType</a>"},{"name":"AddContextCredentialsType","longname":"tls.Server.AddContextCredentialsType","link":"<a href=\"tls.Server.html#.AddContextCredentialsType\">tls.Server.AddContextCredentialsType</a>"},{"name":"AddressReturnsType","longname":"tls.Server.AddressReturnsType","link":"<a href=\"tls.Server.html#.AddressReturnsType\">tls.Server.AddressReturnsType</a>"},{"name":"CallErrorCallback","longname":"assert.internal.DoesNotThrowType.CallErrorCallback","link":"<a href=\"assert.internal.DoesNotThrowType.html#.CallErrorCallback\">assert.internal.DoesNotThrowType.CallErrorCallback</a>"},{"name":"CallErrorCallback","longname":"assert.internal.ThrowsType.CallErrorCallback","link":"<a href=\"assert.internal.ThrowsType.html#.CallErrorCallback\">assert.internal.ThrowsType.CallErrorCallback</a>"},{"name":"BindCallbackCallback","longname":"dgram.Socket.BindCallbackCallback","link":"<a href=\"dgram.Socket.html#.BindCallbackCallback\">dgram.Socket.BindCallbackCallback</a>"},{"name":"SendCallbackCallback","longname":"dgram.Socket.SendCallbackCallback","link":"<a href=\"dgram.Socket.html#.SendCallbackCallback\">dgram.Socket.SendCallbackCallback</a>"},{"name":"BindCbCallback","longname":"domain.Domain.BindCbCallback","link":"<a href=\"domain.Domain.html#.BindCbCallback\">domain.Domain.BindCbCallback</a>"},{"name":"InterceptCbCallback","longname":"domain.Domain.InterceptCbCallback","link":"<a href=\"domain.Domain.html#.InterceptCbCallback\">domain.Domain.InterceptCbCallback</a>"},{"name":"SNICallbackCallback","longname":"https.ServerOptions.SNICallbackCallback","link":"<a href=\"https.ServerOptions.html#.SNICallbackCallback\">https.ServerOptions.SNICallbackCallback</a>"},{"name":"ExecCallbackCallback","longname":"module:child_process.ExecCallbackCallback","link":"<a href=\"module-child_process.html#.ExecCallbackCallback\">child_process.ExecCallbackCallback</a>"},{"name":"ExecFileCallbackCallback","longname":"module:child_process.ExecFileCallbackCallback","link":"<a href=\"module-child_process.html#.ExecFileCallbackCallback\">child_process.ExecFileCallbackCallback</a>"},{"name":"Pbkdf2CallbackCallback","longname":"module:crypto.Pbkdf2CallbackCallback","link":"<a href=\"module-crypto.html#.Pbkdf2CallbackCallback\">crypto.Pbkdf2CallbackCallback</a>"},{"name":"PseudoRandomBytesCallbackCallback","longname":"module:crypto.PseudoRandomBytesCallbackCallback","link":"<a href=\"module-crypto.html#.PseudoRandomBytesCallbackCallback\">crypto.PseudoRandomBytesCallbackCallback</a>"},{"name":"RandomBytesCallbackCallback","longname":"module:crypto.RandomBytesCallbackCallback","link":"<a href=\"module-crypto.html#.RandomBytesCallbackCallback\">crypto.RandomBytesCallbackCallback</a>"},{"name":"CreateSocketCallbackCallback","longname":"module:dgram.CreateSocketCallbackCallback","link":"<a href=\"module-dgram.html#.CreateSocketCallbackCallback\">dgram.CreateSocketCallbackCallback</a>"},{"name":"LookupCallbackCallback","longname":"module:dns.LookupCallbackCallback","link":"<a href=\"module-dns.html#.LookupCallbackCallback\">dns.LookupCallbackCallback</a>"},{"name":"Resolve4CallbackCallback","longname":"module:dns.Resolve4CallbackCallback","link":"<a href=\"module-dns.html#.Resolve4CallbackCallback\">dns.Resolve4CallbackCallback</a>"},{"name":"Resolve6CallbackCallback","longname":"module:dns.Resolve6CallbackCallback","link":"<a href=\"module-dns.html#.Resolve6CallbackCallback\">dns.Resolve6CallbackCallback</a>"},{"name":"ResolveCallbackCallback","longname":"module:dns.ResolveCallbackCallback","link":"<a href=\"module-dns.html#.ResolveCallbackCallback\">dns.ResolveCallbackCallback</a>"},{"name":"ResolveCnameCallbackCallback","longname":"module:dns.ResolveCnameCallbackCallback","link":"<a href=\"module-dns.html#.ResolveCnameCallbackCallback\">dns.ResolveCnameCallbackCallback</a>"},{"name":"ResolveMxCallbackCallback","longname":"module:dns.ResolveMxCallbackCallback","link":"<a href=\"module-dns.html#.ResolveMxCallbackCallback\">dns.ResolveMxCallbackCallback</a>"},{"name":"ResolveNsCallbackCallback","longname":"module:dns.ResolveNsCallbackCallback","link":"<a href=\"module-dns.html#.ResolveNsCallbackCallback\">dns.ResolveNsCallbackCallback</a>"},{"name":"ResolveSrvCallbackCallback","longname":"module:dns.ResolveSrvCallbackCallback","link":"<a href=\"module-dns.html#.ResolveSrvCallbackCallback\">dns.ResolveSrvCallbackCallback</a>"},{"name":"ResolveTxtCallbackCallback","longname":"module:dns.ResolveTxtCallbackCallback","link":"<a href=\"module-dns.html#.ResolveTxtCallbackCallback\">dns.ResolveTxtCallbackCallback</a>"},{"name":"ReverseCallbackCallback","longname":"module:dns.ReverseCallbackCallback","link":"<a href=\"module-dns.html#.ReverseCallbackCallback\">dns.ReverseCallbackCallback</a>"},{"name":"AppendFileCallbackCallback","longname":"module:fs.AppendFileCallbackCallback","link":"<a href=\"module-fs.html#.AppendFileCallbackCallback\">fs.AppendFileCallbackCallback</a>"},{"name":"ChmodCallbackCallback","longname":"module:fs.ChmodCallbackCallback","link":"<a href=\"module-fs.html#.ChmodCallbackCallback\">fs.ChmodCallbackCallback</a>"},{"name":"ChownCallbackCallback","longname":"module:fs.ChownCallbackCallback","link":"<a href=\"module-fs.html#.ChownCallbackCallback\">fs.ChownCallbackCallback</a>"},{"name":"CloseCallbackCallback","longname":"module:fs.CloseCallbackCallback","link":"<a href=\"module-fs.html#.CloseCallbackCallback\">fs.CloseCallbackCallback</a>"},{"name":"ExistsCallbackCallback","longname":"module:fs.ExistsCallbackCallback","link":"<a href=\"module-fs.html#.ExistsCallbackCallback\">fs.ExistsCallbackCallback</a>"},{"name":"FchmodCallbackCallback","longname":"module:fs.FchmodCallbackCallback","link":"<a href=\"module-fs.html#.FchmodCallbackCallback\">fs.FchmodCallbackCallback</a>"},{"name":"FchownCallbackCallback","longname":"module:fs.FchownCallbackCallback","link":"<a href=\"module-fs.html#.FchownCallbackCallback\">fs.FchownCallbackCallback</a>"},{"name":"FstatCallbackCallback","longname":"module:fs.FstatCallbackCallback","link":"<a href=\"module-fs.html#.FstatCallbackCallback\">fs.FstatCallbackCallback</a>"},{"name":"FsyncCallbackCallback","longname":"module:fs.FsyncCallbackCallback","link":"<a href=\"module-fs.html#.FsyncCallbackCallback\">fs.FsyncCallbackCallback</a>"},{"name":"FtruncateCallbackCallback","longname":"module:fs.FtruncateCallbackCallback","link":"<a href=\"module-fs.html#.FtruncateCallbackCallback\">fs.FtruncateCallbackCallback</a>"},{"name":"FutimesCallbackCallback","longname":"module:fs.FutimesCallbackCallback","link":"<a href=\"module-fs.html#.FutimesCallbackCallback\">fs.FutimesCallbackCallback</a>"},{"name":"LchmodCallbackCallback","longname":"module:fs.LchmodCallbackCallback","link":"<a href=\"module-fs.html#.LchmodCallbackCallback\">fs.LchmodCallbackCallback</a>"},{"name":"LchownCallbackCallback","longname":"module:fs.LchownCallbackCallback","link":"<a href=\"module-fs.html#.LchownCallbackCallback\">fs.LchownCallbackCallback</a>"},{"name":"LinkCallbackCallback","longname":"module:fs.LinkCallbackCallback","link":"<a href=\"module-fs.html#.LinkCallbackCallback\">fs.LinkCallbackCallback</a>"},{"name":"LstatCallbackCallback","longname":"module:fs.LstatCallbackCallback","link":"<a href=\"module-fs.html#.LstatCallbackCallback\">fs.LstatCallbackCallback</a>"},{"name":"MkdirCallbackCallback","longname":"module:fs.MkdirCallbackCallback","link":"<a href=\"module-fs.html#.MkdirCallbackCallback\">fs.MkdirCallbackCallback</a>"},{"name":"OpenCallbackCallback","longname":"module:fs.OpenCallbackCallback","link":"<a href=\"module-fs.html#.OpenCallbackCallback\">fs.OpenCallbackCallback</a>"},{"name":"ReadCallbackCallback","longname":"module:fs.ReadCallbackCallback","link":"<a href=\"module-fs.html#.ReadCallbackCallback\">fs.ReadCallbackCallback</a>"},{"name":"ReaddirCallbackCallback","longname":"module:fs.ReaddirCallbackCallback","link":"<a href=\"module-fs.html#.ReaddirCallbackCallback\">fs.ReaddirCallbackCallback</a>"},{"name":"ReadFileCallbackCallback","longname":"module:fs.ReadFileCallbackCallback","link":"<a href=\"module-fs.html#.ReadFileCallbackCallback\">fs.ReadFileCallbackCallback</a>"},{"name":"ReadlinkCallbackCallback","longname":"module:fs.ReadlinkCallbackCallback","link":"<a href=\"module-fs.html#.ReadlinkCallbackCallback\">fs.ReadlinkCallbackCallback</a>"},{"name":"RealpathCallbackCallback","longname":"module:fs.RealpathCallbackCallback","link":"<a href=\"module-fs.html#.RealpathCallbackCallback\">fs.RealpathCallbackCallback</a>"},{"name":"RenameCallbackCallback","longname":"module:fs.RenameCallbackCallback","link":"<a href=\"module-fs.html#.RenameCallbackCallback\">fs.RenameCallbackCallback</a>"},{"name":"RmdirCallbackCallback","longname":"module:fs.RmdirCallbackCallback","link":"<a href=\"module-fs.html#.RmdirCallbackCallback\">fs.RmdirCallbackCallback</a>"},{"name":"StatCallbackCallback","longname":"module:fs.StatCallbackCallback","link":"<a href=\"module-fs.html#.StatCallbackCallback\">fs.StatCallbackCallback</a>"},{"name":"SymlinkCallbackCallback","longname":"module:fs.SymlinkCallbackCallback","link":"<a href=\"module-fs.html#.SymlinkCallbackCallback\">fs.SymlinkCallbackCallback</a>"},{"name":"TruncateCallbackCallback","longname":"module:fs.TruncateCallbackCallback","link":"<a href=\"module-fs.html#.TruncateCallbackCallback\">fs.TruncateCallbackCallback</a>"},{"name":"UnlinkCallbackCallback","longname":"module:fs.UnlinkCallbackCallback","link":"<a href=\"module-fs.html#.UnlinkCallbackCallback\">fs.UnlinkCallbackCallback</a>"},{"name":"UnwatchFileListenerCallback","longname":"module:fs.UnwatchFileListenerCallback","link":"<a href=\"module-fs.html#.UnwatchFileListenerCallback\">fs.UnwatchFileListenerCallback</a>"},{"name":"UtimesCallbackCallback","longname":"module:fs.UtimesCallbackCallback","link":"<a href=\"module-fs.html#.UtimesCallbackCallback\">fs.UtimesCallbackCallback</a>"},{"name":"WatchFileListenerCallback","longname":"module:fs.WatchFileListenerCallback","link":"<a href=\"module-fs.html#.WatchFileListenerCallback\">fs.WatchFileListenerCallback</a>"},{"name":"WatchListenerCallback","longname":"module:fs.WatchListenerCallback","link":"<a href=\"module-fs.html#.WatchListenerCallback\">fs.WatchListenerCallback</a>"},{"name":"WriteCallbackCallback","longname":"module:fs.WriteCallbackCallback","link":"<a href=\"module-fs.html#.WriteCallbackCallback\">fs.WriteCallbackCallback</a>"},{"name":"WriteFileCallbackCallback","longname":"module:fs.WriteFileCallbackCallback","link":"<a href=\"module-fs.html#.WriteFileCallbackCallback\">fs.WriteFileCallbackCallback</a>"},{"name":"CreateServerRequestListenerCallback","longname":"module:http.CreateServerRequestListenerCallback","link":"<a href=\"module-http.html#.CreateServerRequestListenerCallback\">http.CreateServerRequestListenerCallback</a>"},{"name":"GetCallbackCallback","longname":"module:http.GetCallbackCallback","link":"<a href=\"module-http.html#.GetCallbackCallback\">http.GetCallbackCallback</a>"},{"name":"RequestCallbackCallback","longname":"module:http.RequestCallbackCallback","link":"<a href=\"module-http.html#.RequestCallbackCallback\">http.RequestCallbackCallback</a>"},{"name":"GetCallbackCallback","longname":"module:https.GetCallbackCallback","link":"<a href=\"module-https.html#.GetCallbackCallback\">https.GetCallbackCallback</a>"},{"name":"RequestCallbackCallback","longname":"module:https.RequestCallbackCallback","link":"<a href=\"module-https.html#.RequestCallbackCallback\">https.RequestCallbackCallback</a>"},{"name":"CreateServerConnectionListenerCallback","longname":"module:net.CreateServerConnectionListenerCallback","link":"<a href=\"module-net.html#.CreateServerConnectionListenerCallback\">net.CreateServerConnectionListenerCallback</a>"},{"name":"ConnectSecureConnectionListenerCallback","longname":"module:tls.ConnectSecureConnectionListenerCallback","link":"<a href=\"module-tls.html#.ConnectSecureConnectionListenerCallback\">tls.ConnectSecureConnectionListenerCallback</a>"},{"name":"ConnectSecureConnectListenerCallback","longname":"module:tls.ConnectSecureConnectListenerCallback","link":"<a href=\"module-tls.html#.ConnectSecureConnectListenerCallback\">tls.ConnectSecureConnectListenerCallback</a>"},{"name":"CreateServerSecureConnectionListenerCallback","longname":"module:tls.CreateServerSecureConnectionListenerCallback","link":"<a href=\"module-tls.html#.CreateServerSecureConnectionListenerCallback\">tls.CreateServerSecureConnectionListenerCallback</a>"},{"name":"DeflateCallbackCallback","longname":"module:zlib.DeflateCallbackCallback","link":"<a href=\"module-zlib.html#.DeflateCallbackCallback\">zlib.DeflateCallbackCallback</a>"},{"name":"DeflateRawCallbackCallback","longname":"module:zlib.DeflateRawCallbackCallback","link":"<a href=\"module-zlib.html#.DeflateRawCallbackCallback\">zlib.DeflateRawCallbackCallback</a>"},{"name":"GunzipCallbackCallback","longname":"module:zlib.GunzipCallbackCallback","link":"<a href=\"module-zlib.html#.GunzipCallbackCallback\">zlib.GunzipCallbackCallback</a>"},{"name":"GzipCallbackCallback","longname":"module:zlib.GzipCallbackCallback","link":"<a href=\"module-zlib.html#.GzipCallbackCallback\">zlib.GzipCallbackCallback</a>"},{"name":"InflateCallbackCallback","longname":"module:zlib.InflateCallbackCallback","link":"<a href=\"module-zlib.html#.InflateCallbackCallback\">zlib.InflateCallbackCallback</a>"},{"name":"InflateRawCallbackCallback","longname":"module:zlib.InflateRawCallbackCallback","link":"<a href=\"module-zlib.html#.InflateRawCallbackCallback\">zlib.InflateRawCallbackCallback</a>"},{"name":"UnzipCallbackCallback","longname":"module:zlib.UnzipCallbackCallback","link":"<a href=\"module-zlib.html#.UnzipCallbackCallback\">zlib.UnzipCallbackCallback</a>"},{"name":"ClearImmediateCallback","longname":"NodeJS.Global.ClearImmediateCallback","link":"<a href=\"NodeJS.Global.html#.ClearImmediateCallback\">NodeJS.Global.ClearImmediateCallback</a>"},{"name":"ClearIntervalCallback","longname":"NodeJS.Global.ClearIntervalCallback","link":"<a href=\"NodeJS.Global.html#.ClearIntervalCallback\">NodeJS.Global.ClearIntervalCallback</a>"},{"name":"ClearTimeoutCallback","longname":"NodeJS.Global.ClearTimeoutCallback","link":"<a href=\"NodeJS.Global.html#.ClearTimeoutCallback\">NodeJS.Global.ClearTimeoutCallback</a>"},{"name":"EscapeCallback","longname":"NodeJS.Global.EscapeCallback","link":"<a href=\"NodeJS.Global.html#.EscapeCallback\">NodeJS.Global.EscapeCallback</a>"},{"name":"SetImmediateCallback","longname":"NodeJS.Global.SetImmediateCallback","link":"<a href=\"NodeJS.Global.html#.SetImmediateCallback\">NodeJS.Global.SetImmediateCallback</a>"},{"name":"SetImmediateCallbackCallbackCallback","longname":"NodeJS.Global.SetImmediateCallbackCallbackCallback","link":"<a href=\"NodeJS.Global.html#.SetImmediateCallbackCallbackCallback\">NodeJS.Global.SetImmediateCallbackCallbackCallback</a>"},{"name":"SetIntervalCallback","longname":"NodeJS.Global.SetIntervalCallback","link":"<a href=\"NodeJS.Global.html#.SetIntervalCallback\">NodeJS.Global.SetIntervalCallback</a>"},{"name":"SetIntervalCallbackCallbackCallback","longname":"NodeJS.Global.SetIntervalCallbackCallbackCallback","link":"<a href=\"NodeJS.Global.html#.SetIntervalCallbackCallbackCallback\">NodeJS.Global.SetIntervalCallbackCallbackCallback</a>"},{"name":"SetTimeoutCallback","longname":"NodeJS.Global.SetTimeoutCallback","link":"<a href=\"NodeJS.Global.html#.SetTimeoutCallback\">NodeJS.Global.SetTimeoutCallback</a>"},{"name":"SetTimeoutCallbackCallbackCallback","longname":"NodeJS.Global.SetTimeoutCallbackCallbackCallback","link":"<a href=\"NodeJS.Global.html#.SetTimeoutCallbackCallbackCallback\">NodeJS.Global.SetTimeoutCallbackCallbackCallback</a>"},{"name":"UnescapeCallback","longname":"NodeJS.Global.UnescapeCallback","link":"<a href=\"NodeJS.Global.html#.UnescapeCallback\">NodeJS.Global.UnescapeCallback</a>"},{"name":"SetImmediateCallbackCallback","longname":"SetImmediateCallbackCallback","link":"<a href=\"global.html#global#SetImmediateCallbackCallback\">SetImmediateCallbackCallback</a>"},{"name":"SetIntervalCallbackCallback","longname":"SetIntervalCallbackCallback","link":"<a href=\"global.html#global#SetIntervalCallbackCallback\">SetIntervalCallbackCallback</a>"},{"name":"SetTimeoutCallbackCallback","longname":"SetTimeoutCallbackCallback","link":"<a href=\"global.html#global#SetTimeoutCallbackCallback\">SetTimeoutCallbackCallback</a>"},{"name":"SNICallbackCallback","longname":"tls.TlsOptions.SNICallbackCallback","link":"<a href=\"tls.TlsOptions.html#.SNICallbackCallback\">tls.TlsOptions.SNICallbackCallback</a>"},{"name":"internal","longname":"module:assert.internal","link":"<a href=\"module-assert.html#.internal\">assert.internal</a>"},{"name":"posix","longname":"module:path.posix","link":"<a href=\"module-path.posix.html\">path.posix</a>"},{"name":"win32","longname":"module:path.win32","link":"<a href=\"module-path.win32.html\">path.win32</a>"},{"name":"NodeJS","longname":"NodeJS","link":"<a href=\"NodeJS.html\">NodeJS</a>"}];
+    </script>
+    <script src="scripts/main.js"></script>
+    
+    
+</body>
+</html>
