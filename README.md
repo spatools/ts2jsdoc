@@ -125,9 +125,7 @@ Template options are provided using JSDoc's `config.json`:
 * __collapseSymbols__: _(Optional, Default: true)_ If your pages have a large number of symbols, it can be easy to get lost in all the text. If `true` all of the symbols in the page will roll their contents up so that you just get a list of symbols that can be expanded and collapsed.
 * __footer__: _(Optional)_ Any markup want to appear in the footer of each page. This is not processed at all, just printed exactly as you enter it.
 * __copyright__: _(Optional)_ You can add a copyright message below the footer and above the JSDoc timestamp at the bottom of the page.
-* __analytics__: _(Optional)_ Add a [Google Analytics](http://www.google.com/analytics) code to the template output e.g. `"analytics":{"ua":"UA-XXXXX-XXX", "domain":"XXXX"}`.
-    * __ua__: The google agent (see Google Analytics help for details).
-    * __domain__: The domain being served (see Google Analytics help for details).
+* __analytics__: _(Optional)_ Add a [Google Analytics](http://www.google.com/analytics) code to the template output. Use your Site ID. e.g. `"analytics": "UA-XXXXX-XXX"`.
 
 ## CLI
 
