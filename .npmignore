@@ -1,6 +1,7 @@
 .git*
 *.ts
 *.d.ts
+.grunt/
 build/
 temp/
 out/
