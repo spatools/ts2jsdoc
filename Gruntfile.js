@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         
         jsdoc : {
             typescript : {
-                src: ["node_modules/typescript/bin/typescript.d.ts"],
+                src: ["node_modules/typescript/bin/typescriptServices.d.ts"],
                 dest: "<%= paths.dist %>/typescript",
                 options: { configure: "<%= paths.build %>/conf.typescript.json" }
             },
