@@ -1,0 +1,3889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>typescript Interface: ClassDeclaration</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+    
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <header>
+        
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">typescript</a>
+        </div>
+        <div class="collapse navbar-collapse" id="top-menu-collapse">
+            
+                
+<ul class="nav navbar-nav">
+    <li class="">
+        <a href="index.html">Home</a>
+    </li>
+    
+    <li class="dropdown">
+        <a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          Classes 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu inline" role="menu">
+            <ul class="list-inline">
+            
+                <li><a href="ts.CancellationTokenObject.html">ts.CancellationTokenObject</a></li>
+            
+                <li><a href="ts.ClassificationTypeNames.html">ts.ClassificationTypeNames</a></li>
+            
+                <li><a href="ts.OperationCanceledException.html">ts.OperationCanceledException</a></li>
+            
+                <li><a href="ts.ScriptElementKind.html">ts.ScriptElementKind</a></li>
+            
+                <li><a href="ts.ScriptElementKindModifier.html">ts.ScriptElementKindModifier</a></li>
+            
+                <li><a href="ts.TextChange.html">ts.TextChange</a></li>
+            
+                <li><a href="ts.TextChangeRange.html">ts.TextChangeRange</a></li>
+            
+                <li><a href="ts.TextSpan.html">ts.TextSpan</a></li>
+            
+            </ul>
+        </ul>
+    </li>
+    
+    <li class="dropdown active">
+        <a href="interfaces.list.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          Interfaces 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu inline" role="menu">
+            <ul class="list-inline">
+            
+                <li><a href="ts.AccessorDeclaration.html">ts.AccessorDeclaration</a></li>
+            
+                <li><a href="ts.ArrayLiteralExpression.html">ts.ArrayLiteralExpression</a></li>
+            
+                <li><a href="ts.ArrayTypeNode.html">ts.ArrayTypeNode</a></li>
+            
+                <li><a href="ts.BinaryExpression.html">ts.BinaryExpression</a></li>
+            
+                <li><a href="ts.Block.html">ts.Block</a></li>
+            
+                <li><a href="ts.BreakOrContinueStatement.html">ts.BreakOrContinueStatement</a></li>
+            
+                <li><a href="ts.CallExpression.html">ts.CallExpression</a></li>
+            
+                <li><a href="ts.CancellationToken.html">ts.CancellationToken</a></li>
+            
+                <li><a href="ts.CaseClause.html">ts.CaseClause</a></li>
+            
+                <li><a href="ts.CatchClause.html">ts.CatchClause</a></li>
+            
+                <li><a href="ts.ClassDeclaration.html">ts.ClassDeclaration</a></li>
+            
+                <li><a href="ts.ClassElement.html">ts.ClassElement</a></li>
+            
+                <li><a href="ts.ClassificationInfo.html">ts.ClassificationInfo</a></li>
+            
+                <li><a href="ts.ClassificationResult.html">ts.ClassificationResult</a></li>
+            
+                <li><a href="ts.ClassifiedSpan.html">ts.ClassifiedSpan</a></li>
+            
+                <li><a href="ts.Classifier.html">ts.Classifier</a></li>
+            
+                <li><a href="ts.CommandLineOption.html">ts.CommandLineOption</a></li>
+            
+                <li><a href="ts.CommentRange.html">ts.CommentRange</a></li>
+            
+                <li><a href="ts.CompilerHost.html">ts.CompilerHost</a></li>
+            
+                <li><a href="ts.CompilerOptions.html">ts.CompilerOptions</a></li>
+            
+                <li><a href="ts.CompletionEntry.html">ts.CompletionEntry</a></li>
+            
+                <li><a href="ts.CompletionEntryDetails.html">ts.CompletionEntryDetails</a></li>
+            
+                <li><a href="ts.CompletionInfo.html">ts.CompletionInfo</a></li>
+            
+                <li><a href="ts.ComputedPropertyName.html">ts.ComputedPropertyName</a></li>
+            
+                <li><a href="ts.ConditionalExpression.html">ts.ConditionalExpression</a></li>
+            
+                <li><a href="ts.ConstructorDeclaration.html">ts.ConstructorDeclaration</a></li>
+            
+                <li><a href="ts.Declaration.html">ts.Declaration</a></li>
+            
+                <li><a href="ts.DefaultClause.html">ts.DefaultClause</a></li>
+            
+                <li><a href="ts.DefinitionInfo.html">ts.DefinitionInfo</a></li>
+            
+                <li><a href="ts.DeleteExpression.html">ts.DeleteExpression</a></li>
+            
+                <li><a href="ts.Diagnostic.html">ts.Diagnostic</a></li>
+            
+                <li><a href="ts.DiagnosticMessage.html">ts.DiagnosticMessage</a></li>
+            
+                <li><a href="ts.DiagnosticMessageChain.html">ts.DiagnosticMessageChain</a></li>
+            
+                <li><a href="ts.DisplayPartsSymbolWriter.html">ts.DisplayPartsSymbolWriter</a></li>
+            
+                <li><a href="ts.DocumentRegistry.html">ts.DocumentRegistry</a></li>
+            
+                <li><a href="ts.DoStatement.html">ts.DoStatement</a></li>
+            
+                <li><a href="ts.EditorOptions.html">ts.EditorOptions</a></li>
+            
+                <li><a href="ts.ElementAccessExpression.html">ts.ElementAccessExpression</a></li>
+            
+                <li><a href="ts.EmitOutput.html">ts.EmitOutput</a></li>
+            
+                <li><a href="ts.EmitResolver.html">ts.EmitResolver</a></li>
+            
+                <li><a href="ts.EmitResult.html">ts.EmitResult</a></li>
+            
+                <li><a href="ts.EnumDeclaration.html">ts.EnumDeclaration</a></li>
+            
+                <li><a href="ts.EnumMember.html">ts.EnumMember</a></li>
+            
+                <li><a href="ts.ExportAssignment.html">ts.ExportAssignment</a></li>
+            
+                <li><a href="ts.Expression.html">ts.Expression</a></li>
+            
+                <li><a href="ts.ExpressionStatement.html">ts.ExpressionStatement</a></li>
+            
+                <li><a href="ts.ExternalModuleReference.html">ts.ExternalModuleReference</a></li>
+            
+                <li><a href="ts.FileReference.html">ts.FileReference</a></li>
+            
+                <li><a href="ts.ForInStatement.html">ts.ForInStatement</a></li>
+            
+                <li><a href="ts.FormatCodeOptions.html">ts.FormatCodeOptions</a></li>
+            
+                <li><a href="ts.ForStatement.html">ts.ForStatement</a></li>
+            
+                <li><a href="ts.FunctionDeclaration.html">ts.FunctionDeclaration</a></li>
+            
+                <li><a href="ts.FunctionExpression.html">ts.FunctionExpression</a></li>
+            
+                <li><a href="ts.FunctionLikeDeclaration.html">ts.FunctionLikeDeclaration</a></li>
+            
+                <li><a href="ts.FunctionOrConstructorTypeNode.html">ts.FunctionOrConstructorTypeNode</a></li>
+            
+                <li><a href="ts.GenericType.html">ts.GenericType</a></li>
+            
+                <li><a href="ts.HeritageClause.html">ts.HeritageClause</a></li>
+            
+                <li><a href="ts.Identifier.html">ts.Identifier</a></li>
+            
+                <li><a href="ts.IfStatement.html">ts.IfStatement</a></li>
+            
+                <li><a href="ts.ImportDeclaration.html">ts.ImportDeclaration</a></li>
+            
+                <li><a href="ts.IndexSignatureDeclaration.html">ts.IndexSignatureDeclaration</a></li>
+            
+                <li><a href="ts.InferenceContext.html">ts.InferenceContext</a></li>
+            
+                <li><a href="ts.InterfaceDeclaration.html">ts.InterfaceDeclaration</a></li>
+            
+                <li><a href="ts.InterfaceType.html">ts.InterfaceType</a></li>
+            
+                <li><a href="ts.IntrinsicType.html">ts.IntrinsicType</a></li>
+            
+                <li><a href="ts.IScriptSnapshot.html">ts.IScriptSnapshot</a></li>
+            
+                <li><a href="ts.IterationStatement.html">ts.IterationStatement</a></li>
+            
+                <li><a href="ts.LabeledStatement.html">ts.LabeledStatement</a></li>
+            
+                <li><a href="ts.LanguageService.html">ts.LanguageService</a></li>
+            
+                <li><a href="ts.LanguageServiceHost.html">ts.LanguageServiceHost</a></li>
+            
+                <li><a href="ts.LeftHandSideExpression.html">ts.LeftHandSideExpression</a></li>
+            
+                <li><a href="ts.LineAndCharacter.html">ts.LineAndCharacter</a></li>
+            
+                <li><a href="ts.LiteralExpression.html">ts.LiteralExpression</a></li>
+            
+                <li><a href="ts.Logger.html">ts.Logger</a></li>
+            
+                <li><a href="ts.Map.html">ts.Map</a></li>
+            
+                <li><a href="ts.MemberExpression.html">ts.MemberExpression</a></li>
+            
+                <li><a href="ts.MethodDeclaration.html">ts.MethodDeclaration</a></li>
+            
+                <li><a href="ts.ModifiersArray.html">ts.ModifiersArray</a></li>
+            
+                <li><a href="ts.ModuleBlock.html">ts.ModuleBlock</a></li>
+            
+                <li><a href="ts.ModuleDeclaration.html">ts.ModuleDeclaration</a></li>
+            
+                <li><a href="ts.ModuleElement.html">ts.ModuleElement</a></li>
+            
+                <li><a href="ts.NavigateToItem.html">ts.NavigateToItem</a></li>
+            
+                <li><a href="ts.NavigationBarItem.html">ts.NavigationBarItem</a></li>
+            
+                <li><a href="ts.Node.html">ts.Node</a></li>
+            
+                <li><a href="ts.NodeArray.html">ts.NodeArray</a></li>
+            
+                <li><a href="ts.NodeLinks.html">ts.NodeLinks</a></li>
+            
+                <li><a href="ts.ObjectLiteralElement.html">ts.ObjectLiteralElement</a></li>
+            
+                <li><a href="ts.ObjectLiteralExpression.html">ts.ObjectLiteralExpression</a></li>
+            
+                <li><a href="ts.OutliningSpan.html">ts.OutliningSpan</a></li>
+            
+                <li><a href="ts.OutputFile.html">ts.OutputFile</a></li>
+            
+                <li><a href="ts.ParameterDeclaration.html">ts.ParameterDeclaration</a></li>
+            
+                <li><a href="ts.ParenthesizedExpression.html">ts.ParenthesizedExpression</a></li>
+            
+                <li><a href="ts.ParenthesizedTypeNode.html">ts.ParenthesizedTypeNode</a></li>
+            
+                <li><a href="ts.ParsedCommandLine.html">ts.ParsedCommandLine</a></li>
+            
+                <li><a href="ts.PostfixExpression.html">ts.PostfixExpression</a></li>
+            
+                <li><a href="ts.PostfixUnaryExpression.html">ts.PostfixUnaryExpression</a></li>
+            
+                <li><a href="ts.PrefixUnaryExpression.html">ts.PrefixUnaryExpression</a></li>
+            
+                <li><a href="ts.PreProcessedFileInfo.html">ts.PreProcessedFileInfo</a></li>
+            
+                <li><a href="ts.PrimaryExpression.html">ts.PrimaryExpression</a></li>
+            
+                <li><a href="ts.Program.html">ts.Program</a></li>
+            
+                <li><a href="ts.PropertyAccessExpression.html">ts.PropertyAccessExpression</a></li>
+            
+                <li><a href="ts.PropertyAssignment.html">ts.PropertyAssignment</a></li>
+            
+                <li><a href="ts.PropertyDeclaration.html">ts.PropertyDeclaration</a></li>
+            
+                <li><a href="ts.QualifiedName.html">ts.QualifiedName</a></li>
+            
+                <li><a href="ts.QuickInfo.html">ts.QuickInfo</a></li>
+            
+                <li><a href="ts.ReferenceEntry.html">ts.ReferenceEntry</a></li>
+            
+                <li><a href="ts.RenameInfo.html">ts.RenameInfo</a></li>
+            
+                <li><a href="ts.RenameLocation.html">ts.RenameLocation</a></li>
+            
+                <li><a href="ts.ResolvedType.html">ts.ResolvedType</a></li>
+            
+                <li><a href="ts.ReturnStatement.html">ts.ReturnStatement</a></li>
+            
+                <li><a href="ts.Scanner.html">ts.Scanner</a></li>
+            
+                <li><a href="ts.ShorthandPropertyAssignment.html">ts.ShorthandPropertyAssignment</a></li>
+            
+                <li><a href="ts.Signature.html">ts.Signature</a></li>
+            
+                <li><a href="ts.SignatureDeclaration.html">ts.SignatureDeclaration</a></li>
+            
+                <li><a href="ts.SignatureHelpItem.html">ts.SignatureHelpItem</a></li>
+            
+                <li><a href="ts.SignatureHelpItems.html">ts.SignatureHelpItems</a></li>
+            
+                <li><a href="ts.SignatureHelpParameter.html">ts.SignatureHelpParameter</a></li>
+            
+                <li><a href="ts.SourceFile.html">ts.SourceFile</a></li>
+            
+                <li><a href="ts.SourceMapData.html">ts.SourceMapData</a></li>
+            
+                <li><a href="ts.SourceMapSpan.html">ts.SourceMapSpan</a></li>
+            
+                <li><a href="ts.Statement.html">ts.Statement</a></li>
+            
+                <li><a href="ts.StringLiteralExpression.html">ts.StringLiteralExpression</a></li>
+            
+                <li><a href="ts.StringLiteralType.html">ts.StringLiteralType</a></li>
+            
+                <li><a href="ts.SwitchStatement.html">ts.SwitchStatement</a></li>
+            
+                <li><a href="ts.Symbol.html">ts.Symbol</a></li>
+            
+                <li><a href="ts.SymbolAccessiblityResult.html">ts.SymbolAccessiblityResult</a></li>
+            
+                <li><a href="ts.SymbolDisplayBuilder.html">ts.SymbolDisplayBuilder</a></li>
+            
+                <li><a href="ts.SymbolDisplayPart.html">ts.SymbolDisplayPart</a></li>
+            
+                <li><a href="ts.SymbolLinks.html">ts.SymbolLinks</a></li>
+            
+                <li><a href="ts.SymbolTable.html">ts.SymbolTable</a></li>
+            
+                <li><a href="ts.SymbolVisibilityResult.html">ts.SymbolVisibilityResult</a></li>
+            
+                <li><a href="ts.SymbolWriter.html">ts.SymbolWriter</a></li>
+            
+                <li><a href="ts.TaggedTemplateExpression.html">ts.TaggedTemplateExpression</a></li>
+            
+                <li><a href="ts.TemplateExpression.html">ts.TemplateExpression</a></li>
+            
+                <li><a href="ts.TemplateSpan.html">ts.TemplateSpan</a></li>
+            
+                <li><a href="ts.TextRange.html">ts.TextRange</a></li>
+            
+                <li><a href="ts.ThrowStatement.html">ts.ThrowStatement</a></li>
+            
+                <li><a href="ts.TodoComment.html">ts.TodoComment</a></li>
+            
+                <li><a href="ts.TodoCommentDescriptor.html">ts.TodoCommentDescriptor</a></li>
+            
+                <li><a href="ts.TryStatement.html">ts.TryStatement</a></li>
+            
+                <li><a href="ts.TupleType.html">ts.TupleType</a></li>
+            
+                <li><a href="ts.TupleTypeNode.html">ts.TupleTypeNode</a></li>
+            
+                <li><a href="ts.Type.html">ts.Type</a></li>
+            
+                <li><a href="ts.TypeAliasDeclaration.html">ts.TypeAliasDeclaration</a></li>
+            
+                <li><a href="ts.TypeAssertion.html">ts.TypeAssertion</a></li>
+            
+                <li><a href="ts.TypeChecker.html">ts.TypeChecker</a></li>
+            
+                <li><a href="ts.TypeInferences.html">ts.TypeInferences</a></li>
+            
+                <li><a href="ts.TypeLiteralNode.html">ts.TypeLiteralNode</a></li>
+            
+                <li><a href="ts.TypeNode.html">ts.TypeNode</a></li>
+            
+                <li><a href="ts.TypeOfExpression.html">ts.TypeOfExpression</a></li>
+            
+                <li><a href="ts.TypeParameter.html">ts.TypeParameter</a></li>
+            
+                <li><a href="ts.TypeParameterDeclaration.html">ts.TypeParameterDeclaration</a></li>
+            
+                <li><a href="ts.TypeQueryNode.html">ts.TypeQueryNode</a></li>
+            
+                <li><a href="ts.TypeReference.html">ts.TypeReference</a></li>
+            
+                <li><a href="ts.TypeReferenceNode.html">ts.TypeReferenceNode</a></li>
+            
+                <li><a href="ts.UnaryExpression.html">ts.UnaryExpression</a></li>
+            
+                <li><a href="ts.UnionType.html">ts.UnionType</a></li>
+            
+                <li><a href="ts.UnionTypeNode.html">ts.UnionTypeNode</a></li>
+            
+                <li><a href="ts.VariableDeclaration.html">ts.VariableDeclaration</a></li>
+            
+                <li><a href="ts.VariableStatement.html">ts.VariableStatement</a></li>
+            
+                <li><a href="ts.VoidExpression.html">ts.VoidExpression</a></li>
+            
+                <li><a href="ts.WhileStatement.html">ts.WhileStatement</a></li>
+            
+                <li><a href="ts.WithStatement.html">ts.WithStatement</a></li>
+            
+                <li><a href="ts.YieldExpression.html">ts.YieldExpression</a></li>
+            
+            </ul>
+        </ul>
+    </li>
+    
+    <li class="dropdown">
+        <a href="typedef.list.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          Type Definitions 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu inline" role="menu">
+            <ul class="list-inline">
+            
+                <li><a href="ts.html#.CallLikeExpression">ts.CallLikeExpression</a></li>
+            
+                <li><a href="ts.html#.CaseOrDefaultClause">ts.CaseOrDefaultClause</a></li>
+            
+                <li><a href="ts.html#.DeclarationName">ts.DeclarationName</a></li>
+            
+                <li><a href="ts.html#.EntityName">ts.EntityName</a></li>
+            
+                <li><a href="ts.html#.GetLineAndCharacterOfPositionReturnsType">ts.GetLineAndCharacterOfPositionReturnsType</a></li>
+            
+                <li><a href="ts.html#.PositionToLineAndCharacterReturnsType">ts.PositionToLineAndCharacterReturnsType</a></li>
+            
+                <li><a href="ts.html#.VariableOrParameterDeclaration">ts.VariableOrParameterDeclaration</a></li>
+            
+                <li><a href="ts.html#.VariableOrParameterOrPropertyDeclaration">ts.VariableOrParameterOrPropertyDeclaration</a></li>
+            
+            </ul>
+        </ul>
+    </li>
+    
+    <li class="dropdown">
+        <a href="enums.list.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          Enums 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu inline" role="menu">
+            <ul class="list-inline">
+            
+                <li><a href="ts.html#.CharacterCodes">ts.CharacterCodes</a></li>
+            
+                <li><a href="ts.html#.DiagnosticCategory">ts.DiagnosticCategory</a></li>
+            
+                <li><a href="ts.html#.EmitReturnStatus">ts.EmitReturnStatus</a></li>
+            
+                <li><a href="ts.html#.EndOfLineState">ts.EndOfLineState</a></li>
+            
+                <li><a href="ts.html#.IndexKind">ts.IndexKind</a></li>
+            
+                <li><a href="ts.html#.ModuleKind">ts.ModuleKind</a></li>
+            
+                <li><a href="ts.html#.NodeCheckFlags">ts.NodeCheckFlags</a></li>
+            
+                <li><a href="ts.html#.NodeFlags">ts.NodeFlags</a></li>
+            
+                <li><a href="ts.html#.OutputFileType">ts.OutputFileType</a></li>
+            
+                <li><a href="ts.html#.ParserContextFlags">ts.ParserContextFlags</a></li>
+            
+                <li><a href="ts.html#.ScriptTarget">ts.ScriptTarget</a></li>
+            
+                <li><a href="ts.html#.SignatureKind">ts.SignatureKind</a></li>
+            
+                <li><a href="ts.html#.SymbolAccessibility">ts.SymbolAccessibility</a></li>
+            
+                <li><a href="ts.html#.SymbolDisplayPartKind">ts.SymbolDisplayPartKind</a></li>
+            
+                <li><a href="ts.html#.SymbolFlags">ts.SymbolFlags</a></li>
+            
+                <li><a href="ts.html#.SymbolFormatFlags">ts.SymbolFormatFlags</a></li>
+            
+                <li><a href="ts.html#.SyntaxKind">ts.SyntaxKind</a></li>
+            
+                <li><a href="ts.html#.TokenClass">ts.TokenClass</a></li>
+            
+                <li><a href="ts.html#.TypeFlags">ts.TypeFlags</a></li>
+            
+                <li><a href="ts.html#.TypeFormatFlags">ts.TypeFormatFlags</a></li>
+            
+            </ul>
+        </ul>
+    </li>
+    
+    <li class="dropdown">
+        <a href="callbacks.list.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          Callbacks 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu inline" role="menu">
+            <ul class="list-inline">
+            
+                <li><a href="ts.html#.CommentCallback">ts.CommentCallback</a></li>
+            
+                <li><a href="ts.CompilerHost.html#.GetSourceFileOnErrorCallback">ts.CompilerHost.GetSourceFileOnErrorCallback</a></li>
+            
+                <li><a href="ts.CompilerHost.html#.WriteFileOnErrorCallback">ts.CompilerHost.WriteFileOnErrorCallback</a></li>
+            
+                <li><a href="ts.html#.ErrorCallback">ts.ErrorCallback</a></li>
+            
+                <li><a href="ts.html#.ForEachChildCbNodeCallback">ts.ForEachChildCbNodeCallback</a></li>
+            
+                <li><a href="ts.html#.ForEachChildCbNodesCallback">ts.ForEachChildCbNodesCallback</a></li>
+            
+                <li><a href="ts.html#.GetNodeConstructorReturnsCallback">ts.GetNodeConstructorReturnsCallback</a></li>
+            
+                <li><a href="ts.Scanner.html#.LookAheadCallbackCallback">ts.Scanner.LookAheadCallbackCallback</a></li>
+            
+                <li><a href="ts.Scanner.html#.TryScanCallbackCallback">ts.Scanner.TryScanCallbackCallback</a></li>
+            
+                <li><a href="ts.html#.TypeMapper">ts.TypeMapper</a></li>
+            
+            </ul>
+        </ul>
+    </li>
+    
+    <li class="dropdown">
+        <a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          Namespaces 
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu inline" role="menu">
+            <ul class="list-inline">
+            
+                <li><a href="ts.html">ts</a></li>
+            
+                <li><a href="ts.ScriptSnapshot.html">ts.ScriptSnapshot</a></li>
+            
+            </ul>
+        </ul>
+    </li>
+    
+</ul>
+            
+            <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control typeahead" placeholder="Search for..." />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+    </header>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="sidebar col-sm-5 col-md-4 col-lg-3">
+                
+
+    
+<aside id="toc" class="well"></aside>
+
+
+
+            </div>
+            <div class="col-sm-7 col-md-8 col-lg-9 col-sm-offset-5 col-md-offset-4 col-lg-offset-3">
+                <div id="main">
+                    
+
+
+<div class="page-header">
+    <h1>
+        Interface
+        <span class="ancestors"><a href="ts.html">ts</a>.</span><!-- remove whitespaces
+     --><span class="type-name">ClassDeclaration</span><!-- remove whitespaces
+     -->
+        
+    </h1>
+</div>
+<section>
+
+<header>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+        
+
+        
+    
+    </div>
+
+   
+
+    
+        <h2 class="subsection-title">Extends</h2>
+
+        <ul>
+            <li>
+
+    <span class="param-type text-info"><a href="ts.Declaration.html">ts.Declaration</a></span>
+    
+
+</li>
+        
+            <li>
+
+    <span class="param-type text-info"><a href="ts.ModuleElement.html">ts.ModuleElement</a></span>
+    
+
+</li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+    
+    
+
+    
+        <h2 class="subsection-title">Properties</h2>
+
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-_declarationBrand">
+        <a name="_declarationBrand"></a>
+
+        <h3 class="panel-title" id="_declarationBrand">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">_declarationBrand</span>: <span class="type-signature text-info">any</span>
+        </h3>
+    </div>
+    <div id="member-collapse-_declarationBrand" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info">any</span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Declaration.html#_declarationBrand">ts.Declaration#_declarationBrand</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-_moduleElementBrand">
+        <a name="_moduleElementBrand"></a>
+
+        <h3 class="panel-title" id="_moduleElementBrand">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">_moduleElementBrand</span>: <span class="type-signature text-info">any</span>
+        </h3>
+    </div>
+    <div id="member-collapse-_moduleElementBrand" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info">any</span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.ModuleElement.html#_moduleElementBrand">ts.ModuleElement#_moduleElementBrand</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-end">
+        <a name="end"></a>
+
+        <h3 class="panel-title" id="end">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">end</span>: <span class="type-signature text-info">number</span>
+        </h3>
+    </div>
+    <div id="member-collapse-end" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info">number</span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.TextRange.html#end">ts.TextRange#end</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-flags">
+        <a name="flags"></a>
+
+        <h3 class="panel-title" id="flags">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">flags</span>: <span class="type-signature text-info"><a href="ts.html#.NodeFlags">ts.NodeFlags</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-flags" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.html#.NodeFlags">ts.NodeFlags</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#flags">ts.Node#flags</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-heritageClauses">
+        <a name="heritageClauses"></a>
+
+        <h3 class="panel-title" id="heritageClauses">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">heritageClauses</span>: <span class="type-signature text-info"><a href="ts.NodeArray.html">ts.NodeArray</a>&lt;<a href="ts.HeritageClause.html">ts.HeritageClause</a>></span>
+        </h3>
+    </div>
+    <div id="member-collapse-heritageClauses" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.NodeArray.html">ts.NodeArray</a>.&lt;<a href="ts.HeritageClause.html">ts.HeritageClause</a>></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-id">
+        <a name="id"></a>
+
+        <h3 class="panel-title" id="id">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">id</span>: <span class="type-signature text-info">number</span>
+        </h3>
+    </div>
+    <div id="member-collapse-id" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info">number</span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#id">ts.Node#id</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-kind">
+        <a name="kind"></a>
+
+        <h3 class="panel-title" id="kind">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">kind</span>: <span class="type-signature text-info"><a href="ts.html#.SyntaxKind">ts.SyntaxKind</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-kind" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.html#.SyntaxKind">ts.SyntaxKind</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#kind">ts.Node#kind</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-locals">
+        <a name="locals"></a>
+
+        <h3 class="panel-title" id="locals">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">locals</span>: <span class="type-signature text-info"><a href="ts.SymbolTable.html">ts.SymbolTable</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-locals" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.SymbolTable.html">ts.SymbolTable</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#locals">ts.Node#locals</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-localSymbol">
+        <a name="localSymbol"></a>
+
+        <h3 class="panel-title" id="localSymbol">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">localSymbol</span>: <span class="type-signature text-info"><a href="ts.Symbol.html">ts.Symbol</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-localSymbol" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.Symbol.html">ts.Symbol</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#localSymbol">ts.Node#localSymbol</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-members">
+        <a name="members"></a>
+
+        <h3 class="panel-title" id="members">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">members</span>: <span class="type-signature text-info"><a href="ts.NodeArray.html">ts.NodeArray</a>&lt;<a href="ts.ClassElement.html">ts.ClassElement</a>></span>
+        </h3>
+    </div>
+    <div id="member-collapse-members" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.NodeArray.html">ts.NodeArray</a>.&lt;<a href="ts.ClassElement.html">ts.ClassElement</a>></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-modifiers">
+        <a name="modifiers"></a>
+
+        <h3 class="panel-title" id="modifiers">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">modifiers</span>: <span class="type-signature text-info"><a href="ts.ModifiersArray.html">ts.ModifiersArray</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-modifiers" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.ModifiersArray.html">ts.ModifiersArray</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#modifiers">ts.Node#modifiers</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-name">
+        <a name="name"></a>
+
+        <h3 class="panel-title" id="name">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">name</span>: <span class="type-signature text-info"><a href="ts.Identifier.html">ts.Identifier</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-name" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.Identifier.html">ts.Identifier</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-nextContainer">
+        <a name="nextContainer"></a>
+
+        <h3 class="panel-title" id="nextContainer">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">nextContainer</span>: <span class="type-signature text-info"><a href="ts.Node.html">ts.Node</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-nextContainer" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.Node.html">ts.Node</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#nextContainer">ts.Node#nextContainer</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-parent">
+        <a name="parent"></a>
+
+        <h3 class="panel-title" id="parent">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">parent</span>: <span class="type-signature text-info"><a href="ts.Node.html">ts.Node</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-parent" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.Node.html">ts.Node</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#parent">ts.Node#parent</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-parserContextFlags">
+        <a name="parserContextFlags"></a>
+
+        <h3 class="panel-title" id="parserContextFlags">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">parserContextFlags</span>: <span class="type-signature text-info"><a href="ts.html#.ParserContextFlags">ts.ParserContextFlags</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-parserContextFlags" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.html#.ParserContextFlags">ts.ParserContextFlags</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#parserContextFlags">ts.Node#parserContextFlags</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-pos">
+        <a name="pos"></a>
+
+        <h3 class="panel-title" id="pos">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">pos</span>: <span class="type-signature text-info">number</span>
+        </h3>
+    </div>
+    <div id="member-collapse-pos" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info">number</span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.TextRange.html#pos">ts.TextRange#pos</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-symbol">
+        <a name="symbol"></a>
+
+        <h3 class="panel-title" id="symbol">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">symbol</span>: <span class="type-signature text-info"><a href="ts.Symbol.html">ts.Symbol</a></span>
+        </h3>
+    </div>
+    <div id="member-collapse-symbol" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.Symbol.html">ts.Symbol</a></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#symbol">ts.Node#symbol</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#member-collapse-typeParameters">
+        <a name="typeParameters"></a>
+
+        <h3 class="panel-title" id="typeParameters">
+            <span class="type-attributes"><span class="label label-success" title="public property">P</span></span> <span class="signature-name">typeParameters</span>: <span class="type-signature text-info"><a href="ts.NodeArray.html">ts.NodeArray</a>&lt;<a href="ts.TypeParameterDeclaration.html">ts.TypeParameterDeclaration</a>></span>
+        </h3>
+    </div>
+    <div id="member-collapse-typeParameters" class="panel-body collapse">
+        
+
+        
+
+        
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+
+    <span class="param-type text-info"><a href="ts.NodeArray.html">ts.NodeArray</a>.&lt;<a href="ts.TypeParameterDeclaration.html">ts.TypeParameterDeclaration</a>></span>
+    
+
+
+            </li>
+        </ul>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+</div>
+        
+    
+
+    
+        <h2 class="subsection-title">Methods</h2>
+
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getChildAt">
+        <a name="getChildAt"></a>
+
+        <h3 class="panel-title name" id="getChildAt">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getChildAt</span><span class="signature">(<span class="signature-param">index</span>: <span class="type-signature text-info">number</span>, <span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info"><a href="ts.Node.html">ts.Node</a></span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getChildAt" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>index</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info">number</span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getChildAt">ts.Node#getChildAt</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info"><a href="ts.Node.html">ts.Node</a></span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getChildCount">
+        <a name="getChildCount"></a>
+
+        <h3 class="panel-title name" id="getChildCount">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getChildCount</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getChildCount" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getChildCount">ts.Node#getChildCount</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getChildren">
+        <a name="getChildren"></a>
+
+        <h3 class="panel-title name" id="getChildren">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getChildren</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info"><a href="ts.Node.html">ts.Node</a>[]</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getChildren" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getChildren">ts.Node#getChildren</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">Array.&lt;<a href="ts.Node.html">ts.Node</a>></span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getEnd">
+        <a name="getEnd"></a>
+
+        <h3 class="panel-title name" id="getEnd">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getEnd</span><span class="signature">()</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getEnd" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getEnd">ts.Node#getEnd</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getFirstToken">
+        <a name="getFirstToken"></a>
+
+        <h3 class="panel-title name" id="getFirstToken">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getFirstToken</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info"><a href="ts.Node.html">ts.Node</a></span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getFirstToken" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getFirstToken">ts.Node#getFirstToken</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info"><a href="ts.Node.html">ts.Node</a></span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getFullStart">
+        <a name="getFullStart"></a>
+
+        <h3 class="panel-title name" id="getFullStart">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getFullStart</span><span class="signature">()</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getFullStart" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getFullStart">ts.Node#getFullStart</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getFullText">
+        <a name="getFullText"></a>
+
+        <h3 class="panel-title name" id="getFullText">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getFullText</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">string</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getFullText" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getFullText">ts.Node#getFullText</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">string</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getFullWidth">
+        <a name="getFullWidth"></a>
+
+        <h3 class="panel-title name" id="getFullWidth">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getFullWidth</span><span class="signature">()</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getFullWidth" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getFullWidth">ts.Node#getFullWidth</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getLastToken">
+        <a name="getLastToken"></a>
+
+        <h3 class="panel-title name" id="getLastToken">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getLastToken</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info"><a href="ts.Node.html">ts.Node</a></span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getLastToken" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getLastToken">ts.Node#getLastToken</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info"><a href="ts.Node.html">ts.Node</a></span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getLeadingTriviaWidth">
+        <a name="getLeadingTriviaWidth"></a>
+
+        <h3 class="panel-title name" id="getLeadingTriviaWidth">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getLeadingTriviaWidth</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getLeadingTriviaWidth" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getLeadingTriviaWidth">ts.Node#getLeadingTriviaWidth</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getSourceFile">
+        <a name="getSourceFile"></a>
+
+        <h3 class="panel-title name" id="getSourceFile">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getSourceFile</span><span class="signature">()</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getSourceFile" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getSourceFile">ts.Node#getSourceFile</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getStart">
+        <a name="getStart"></a>
+
+        <h3 class="panel-title name" id="getStart">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getStart</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getStart" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getStart">ts.Node#getStart</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getText">
+        <a name="getText"></a>
+
+        <h3 class="panel-title name" id="getText">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getText</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">string</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getText" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getText">ts.Node#getText</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">string</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+            
+<div class="panel panel-default">
+    <div class="panel-heading" data-toggle="collapse" data-target="#method-collapse-getWidth">
+        <a name="getWidth"></a>
+
+        <h3 class="panel-title name" id="getWidth">
+            <span class="type-attributes"><span class="label label-success" title="public method">M</span></span> <span class="signature-name">getWidth</span><span class="signature">(<span class="signature-optional text-muted"><span class="signature-param">sourceFile</span>: <span class="type-signature text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span></span>)</span><span class="type-signature"> <span class="glyphicon glyphicon-arrow-right"></span> <span class="text-info">number</span></span>
+
+            
+        </h3>
+    </div>
+    <div id="method-collapse-getWidth" class="panel-body collapse">
+        
+
+        
+
+        
+
+        
+
+        
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+        
+		<th>Type</th>
+        
+
+		
+		<th>Argument</th>
+		
+
+		
+
+        
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>sourceFile</code></td>
+            
+
+            
+                <td class="type">
+                    
+
+    <span class="param-type text-info"><a href="ts.SourceFile.html">ts.SourceFile</a></span>
+    
+
+
+                </td>
+            
+
+            
+                <td class="attributes text-warning">
+                    &lt;optional&gt;<br />
+                    
+                    
+                </td>
+            
+
+            
+
+            
+        </tr>
+
+	
+	</tbody>
+</table>
+
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="ts.Node.html#getWidth">ts.Node#getWidth</a>
+    </li></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+
+        
+
+        
+
+        
+
+        
+        <span>Returns:</span>
+        
+        
+
+
+    { 
+
+    <span class="param-type text-info">number</span>
+    
+
+ }
+
+
+
+
+        
+
+        
+    </div>
+</div>
+ 
+        
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- xperiments
+    
+    <dt style="font-weight:lighter;" class="btn"><i class="icon-eye-open"></i> typescriptServices.d.ts</dt>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+</article>
+
+</section>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        
+        <p>Generated using default typescript.d.ts using <strong>ts2jsdoc</strong> project.</p>
+        
+        
+        <p class="copyright">Copyright SPATools &copy; 2015 The contributors to the JSDoc3, ts2jsdoc, Typescript projects.</p>
+        
+        <p class="jsdoc-message">
+            Documentation generated by
+            <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta3</a>
+            on 2015-05-14 01:21:38.637
+            using the <a href="https://github.com/spatools/ts2jsdoc">ts2jsdoc template</a>.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    
+    <script src="https://cdn.rawgit.com/jgallen23/toc/master/dist/toc.min.js"></script>
+    <script src="scripts/applytoc.js"></script>
+    
+
+    <script>
+        var searchMembers = [{"name":"CancellationTokenObject","longname":"ts.CancellationTokenObject","link":"<a href=\"ts.CancellationTokenObject.html\">ts.CancellationTokenObject</a>"},{"name":"ClassificationTypeNames","longname":"ts.ClassificationTypeNames","link":"<a href=\"ts.ClassificationTypeNames.html\">ts.ClassificationTypeNames</a>"},{"name":"OperationCanceledException","longname":"ts.OperationCanceledException","link":"<a href=\"ts.OperationCanceledException.html\">ts.OperationCanceledException</a>"},{"name":"ScriptElementKind","longname":"ts.ScriptElementKind","link":"<a href=\"ts.ScriptElementKind.html\">ts.ScriptElementKind</a>"},{"name":"ScriptElementKindModifier","longname":"ts.ScriptElementKindModifier","link":"<a href=\"ts.ScriptElementKindModifier.html\">ts.ScriptElementKindModifier</a>"},{"name":"TextChange","longname":"ts.TextChange","link":"<a href=\"ts.TextChange.html\">ts.TextChange</a>"},{"name":"TextChangeRange","longname":"ts.TextChangeRange","link":"<a href=\"ts.TextChangeRange.html\">ts.TextChangeRange</a>"},{"name":"TextSpan","longname":"ts.TextSpan","link":"<a href=\"ts.TextSpan.html\">ts.TextSpan</a>"},{"name":"AccessorDeclaration","longname":"ts.AccessorDeclaration","link":"<a href=\"ts.AccessorDeclaration.html\">ts.AccessorDeclaration</a>"},{"name":"ArrayLiteralExpression","longname":"ts.ArrayLiteralExpression","link":"<a href=\"ts.ArrayLiteralExpression.html\">ts.ArrayLiteralExpression</a>"},{"name":"ArrayTypeNode","longname":"ts.ArrayTypeNode","link":"<a href=\"ts.ArrayTypeNode.html\">ts.ArrayTypeNode</a>"},{"name":"BinaryExpression","longname":"ts.BinaryExpression","link":"<a href=\"ts.BinaryExpression.html\">ts.BinaryExpression</a>"},{"name":"Block","longname":"ts.Block","link":"<a href=\"ts.Block.html\">ts.Block</a>"},{"name":"BreakOrContinueStatement","longname":"ts.BreakOrContinueStatement","link":"<a href=\"ts.BreakOrContinueStatement.html\">ts.BreakOrContinueStatement</a>"},{"name":"CallExpression","longname":"ts.CallExpression","link":"<a href=\"ts.CallExpression.html\">ts.CallExpression</a>"},{"name":"CancellationToken","longname":"ts.CancellationToken","link":"<a href=\"ts.CancellationToken.html\">ts.CancellationToken</a>"},{"name":"CaseClause","longname":"ts.CaseClause","link":"<a href=\"ts.CaseClause.html\">ts.CaseClause</a>"},{"name":"CatchClause","longname":"ts.CatchClause","link":"<a href=\"ts.CatchClause.html\">ts.CatchClause</a>"},{"name":"ClassDeclaration","longname":"ts.ClassDeclaration","link":"<a href=\"ts.ClassDeclaration.html\">ts.ClassDeclaration</a>"},{"name":"ClassElement","longname":"ts.ClassElement","link":"<a href=\"ts.ClassElement.html\">ts.ClassElement</a>"},{"name":"ClassificationInfo","longname":"ts.ClassificationInfo","link":"<a href=\"ts.ClassificationInfo.html\">ts.ClassificationInfo</a>"},{"name":"ClassificationResult","longname":"ts.ClassificationResult","link":"<a href=\"ts.ClassificationResult.html\">ts.ClassificationResult</a>"},{"name":"ClassifiedSpan","longname":"ts.ClassifiedSpan","link":"<a href=\"ts.ClassifiedSpan.html\">ts.ClassifiedSpan</a>"},{"name":"Classifier","longname":"ts.Classifier","link":"<a href=\"ts.Classifier.html\">ts.Classifier</a>"},{"name":"CommandLineOption","longname":"ts.CommandLineOption","link":"<a href=\"ts.CommandLineOption.html\">ts.CommandLineOption</a>"},{"name":"CommentRange","longname":"ts.CommentRange","link":"<a href=\"ts.CommentRange.html\">ts.CommentRange</a>"},{"name":"CompilerHost","longname":"ts.CompilerHost","link":"<a href=\"ts.CompilerHost.html\">ts.CompilerHost</a>"},{"name":"CompilerOptions","longname":"ts.CompilerOptions","link":"<a href=\"ts.CompilerOptions.html\">ts.CompilerOptions</a>"},{"name":"CompletionEntry","longname":"ts.CompletionEntry","link":"<a href=\"ts.CompletionEntry.html\">ts.CompletionEntry</a>"},{"name":"CompletionEntryDetails","longname":"ts.CompletionEntryDetails","link":"<a href=\"ts.CompletionEntryDetails.html\">ts.CompletionEntryDetails</a>"},{"name":"CompletionInfo","longname":"ts.CompletionInfo","link":"<a href=\"ts.CompletionInfo.html\">ts.CompletionInfo</a>"},{"name":"ComputedPropertyName","longname":"ts.ComputedPropertyName","link":"<a href=\"ts.ComputedPropertyName.html\">ts.ComputedPropertyName</a>"},{"name":"ConditionalExpression","longname":"ts.ConditionalExpression","link":"<a href=\"ts.ConditionalExpression.html\">ts.ConditionalExpression</a>"},{"name":"ConstructorDeclaration","longname":"ts.ConstructorDeclaration","link":"<a href=\"ts.ConstructorDeclaration.html\">ts.ConstructorDeclaration</a>"},{"name":"Declaration","longname":"ts.Declaration","link":"<a href=\"ts.Declaration.html\">ts.Declaration</a>"},{"name":"DefaultClause","longname":"ts.DefaultClause","link":"<a href=\"ts.DefaultClause.html\">ts.DefaultClause</a>"},{"name":"DefinitionInfo","longname":"ts.DefinitionInfo","link":"<a href=\"ts.DefinitionInfo.html\">ts.DefinitionInfo</a>"},{"name":"DeleteExpression","longname":"ts.DeleteExpression","link":"<a href=\"ts.DeleteExpression.html\">ts.DeleteExpression</a>"},{"name":"Diagnostic","longname":"ts.Diagnostic","link":"<a href=\"ts.Diagnostic.html\">ts.Diagnostic</a>"},{"name":"DiagnosticMessage","longname":"ts.DiagnosticMessage","link":"<a href=\"ts.DiagnosticMessage.html\">ts.DiagnosticMessage</a>"},{"name":"DiagnosticMessageChain","longname":"ts.DiagnosticMessageChain","link":"<a href=\"ts.DiagnosticMessageChain.html\">ts.DiagnosticMessageChain</a>"},{"name":"DisplayPartsSymbolWriter","longname":"ts.DisplayPartsSymbolWriter","link":"<a href=\"ts.DisplayPartsSymbolWriter.html\">ts.DisplayPartsSymbolWriter</a>"},{"name":"DocumentRegistry","longname":"ts.DocumentRegistry","link":"<a href=\"ts.DocumentRegistry.html\">ts.DocumentRegistry</a>"},{"name":"DoStatement","longname":"ts.DoStatement","link":"<a href=\"ts.DoStatement.html\">ts.DoStatement</a>"},{"name":"EditorOptions","longname":"ts.EditorOptions","link":"<a href=\"ts.EditorOptions.html\">ts.EditorOptions</a>"},{"name":"ElementAccessExpression","longname":"ts.ElementAccessExpression","link":"<a href=\"ts.ElementAccessExpression.html\">ts.ElementAccessExpression</a>"},{"name":"EmitOutput","longname":"ts.EmitOutput","link":"<a href=\"ts.EmitOutput.html\">ts.EmitOutput</a>"},{"name":"EmitResolver","longname":"ts.EmitResolver","link":"<a href=\"ts.EmitResolver.html\">ts.EmitResolver</a>"},{"name":"EmitResult","longname":"ts.EmitResult","link":"<a href=\"ts.EmitResult.html\">ts.EmitResult</a>"},{"name":"EnumDeclaration","longname":"ts.EnumDeclaration","link":"<a href=\"ts.EnumDeclaration.html\">ts.EnumDeclaration</a>"},{"name":"EnumMember","longname":"ts.EnumMember","link":"<a href=\"ts.EnumMember.html\">ts.EnumMember</a>"},{"name":"ExportAssignment","longname":"ts.ExportAssignment","link":"<a href=\"ts.ExportAssignment.html\">ts.ExportAssignment</a>"},{"name":"Expression","longname":"ts.Expression","link":"<a href=\"ts.Expression.html\">ts.Expression</a>"},{"name":"ExpressionStatement","longname":"ts.ExpressionStatement","link":"<a href=\"ts.ExpressionStatement.html\">ts.ExpressionStatement</a>"},{"name":"ExternalModuleReference","longname":"ts.ExternalModuleReference","link":"<a href=\"ts.ExternalModuleReference.html\">ts.ExternalModuleReference</a>"},{"name":"FileReference","longname":"ts.FileReference","link":"<a href=\"ts.FileReference.html\">ts.FileReference</a>"},{"name":"ForInStatement","longname":"ts.ForInStatement","link":"<a href=\"ts.ForInStatement.html\">ts.ForInStatement</a>"},{"name":"FormatCodeOptions","longname":"ts.FormatCodeOptions","link":"<a href=\"ts.FormatCodeOptions.html\">ts.FormatCodeOptions</a>"},{"name":"ForStatement","longname":"ts.ForStatement","link":"<a href=\"ts.ForStatement.html\">ts.ForStatement</a>"},{"name":"FunctionDeclaration","longname":"ts.FunctionDeclaration","link":"<a href=\"ts.FunctionDeclaration.html\">ts.FunctionDeclaration</a>"},{"name":"FunctionExpression","longname":"ts.FunctionExpression","link":"<a href=\"ts.FunctionExpression.html\">ts.FunctionExpression</a>"},{"name":"FunctionLikeDeclaration","longname":"ts.FunctionLikeDeclaration","link":"<a href=\"ts.FunctionLikeDeclaration.html\">ts.FunctionLikeDeclaration</a>"},{"name":"FunctionOrConstructorTypeNode","longname":"ts.FunctionOrConstructorTypeNode","link":"<a href=\"ts.FunctionOrConstructorTypeNode.html\">ts.FunctionOrConstructorTypeNode</a>"},{"name":"GenericType","longname":"ts.GenericType","link":"<a href=\"ts.GenericType.html\">ts.GenericType</a>"},{"name":"HeritageClause","longname":"ts.HeritageClause","link":"<a href=\"ts.HeritageClause.html\">ts.HeritageClause</a>"},{"name":"Identifier","longname":"ts.Identifier","link":"<a href=\"ts.Identifier.html\">ts.Identifier</a>"},{"name":"IfStatement","longname":"ts.IfStatement","link":"<a href=\"ts.IfStatement.html\">ts.IfStatement</a>"},{"name":"ImportDeclaration","longname":"ts.ImportDeclaration","link":"<a href=\"ts.ImportDeclaration.html\">ts.ImportDeclaration</a>"},{"name":"IndexSignatureDeclaration","longname":"ts.IndexSignatureDeclaration","link":"<a href=\"ts.IndexSignatureDeclaration.html\">ts.IndexSignatureDeclaration</a>"},{"name":"InferenceContext","longname":"ts.InferenceContext","link":"<a href=\"ts.InferenceContext.html\">ts.InferenceContext</a>"},{"name":"InterfaceDeclaration","longname":"ts.InterfaceDeclaration","link":"<a href=\"ts.InterfaceDeclaration.html\">ts.InterfaceDeclaration</a>"},{"name":"InterfaceType","longname":"ts.InterfaceType","link":"<a href=\"ts.InterfaceType.html\">ts.InterfaceType</a>"},{"name":"IntrinsicType","longname":"ts.IntrinsicType","link":"<a href=\"ts.IntrinsicType.html\">ts.IntrinsicType</a>"},{"name":"IScriptSnapshot","longname":"ts.IScriptSnapshot","link":"<a href=\"ts.IScriptSnapshot.html\">ts.IScriptSnapshot</a>"},{"name":"IterationStatement","longname":"ts.IterationStatement","link":"<a href=\"ts.IterationStatement.html\">ts.IterationStatement</a>"},{"name":"LabeledStatement","longname":"ts.LabeledStatement","link":"<a href=\"ts.LabeledStatement.html\">ts.LabeledStatement</a>"},{"name":"LanguageService","longname":"ts.LanguageService","link":"<a href=\"ts.LanguageService.html\">ts.LanguageService</a>"},{"name":"LanguageServiceHost","longname":"ts.LanguageServiceHost","link":"<a href=\"ts.LanguageServiceHost.html\">ts.LanguageServiceHost</a>"},{"name":"LeftHandSideExpression","longname":"ts.LeftHandSideExpression","link":"<a href=\"ts.LeftHandSideExpression.html\">ts.LeftHandSideExpression</a>"},{"name":"LineAndCharacter","longname":"ts.LineAndCharacter","link":"<a href=\"ts.LineAndCharacter.html\">ts.LineAndCharacter</a>"},{"name":"LiteralExpression","longname":"ts.LiteralExpression","link":"<a href=\"ts.LiteralExpression.html\">ts.LiteralExpression</a>"},{"name":"Logger","longname":"ts.Logger","link":"<a href=\"ts.Logger.html\">ts.Logger</a>"},{"name":"Map","longname":"ts.Map","link":"<a href=\"ts.Map.html\">ts.Map</a>"},{"name":"MemberExpression","longname":"ts.MemberExpression","link":"<a href=\"ts.MemberExpression.html\">ts.MemberExpression</a>"},{"name":"MethodDeclaration","longname":"ts.MethodDeclaration","link":"<a href=\"ts.MethodDeclaration.html\">ts.MethodDeclaration</a>"},{"name":"ModifiersArray","longname":"ts.ModifiersArray","link":"<a href=\"ts.ModifiersArray.html\">ts.ModifiersArray</a>"},{"name":"ModuleBlock","longname":"ts.ModuleBlock","link":"<a href=\"ts.ModuleBlock.html\">ts.ModuleBlock</a>"},{"name":"ModuleDeclaration","longname":"ts.ModuleDeclaration","link":"<a href=\"ts.ModuleDeclaration.html\">ts.ModuleDeclaration</a>"},{"name":"ModuleElement","longname":"ts.ModuleElement","link":"<a href=\"ts.ModuleElement.html\">ts.ModuleElement</a>"},{"name":"NavigateToItem","longname":"ts.NavigateToItem","link":"<a href=\"ts.NavigateToItem.html\">ts.NavigateToItem</a>"},{"name":"NavigationBarItem","longname":"ts.NavigationBarItem","link":"<a href=\"ts.NavigationBarItem.html\">ts.NavigationBarItem</a>"},{"name":"Node","longname":"ts.Node","link":"<a href=\"ts.Node.html\">ts.Node</a>"},{"name":"NodeArray","longname":"ts.NodeArray","link":"<a href=\"ts.NodeArray.html\">ts.NodeArray</a>"},{"name":"NodeLinks","longname":"ts.NodeLinks","link":"<a href=\"ts.NodeLinks.html\">ts.NodeLinks</a>"},{"name":"ObjectLiteralElement","longname":"ts.ObjectLiteralElement","link":"<a href=\"ts.ObjectLiteralElement.html\">ts.ObjectLiteralElement</a>"},{"name":"ObjectLiteralExpression","longname":"ts.ObjectLiteralExpression","link":"<a href=\"ts.ObjectLiteralExpression.html\">ts.ObjectLiteralExpression</a>"},{"name":"OutliningSpan","longname":"ts.OutliningSpan","link":"<a href=\"ts.OutliningSpan.html\">ts.OutliningSpan</a>"},{"name":"OutputFile","longname":"ts.OutputFile","link":"<a href=\"ts.OutputFile.html\">ts.OutputFile</a>"},{"name":"ParameterDeclaration","longname":"ts.ParameterDeclaration","link":"<a href=\"ts.ParameterDeclaration.html\">ts.ParameterDeclaration</a>"},{"name":"ParenthesizedExpression","longname":"ts.ParenthesizedExpression","link":"<a href=\"ts.ParenthesizedExpression.html\">ts.ParenthesizedExpression</a>"},{"name":"ParenthesizedTypeNode","longname":"ts.ParenthesizedTypeNode","link":"<a href=\"ts.ParenthesizedTypeNode.html\">ts.ParenthesizedTypeNode</a>"},{"name":"ParsedCommandLine","longname":"ts.ParsedCommandLine","link":"<a href=\"ts.ParsedCommandLine.html\">ts.ParsedCommandLine</a>"},{"name":"PostfixExpression","longname":"ts.PostfixExpression","link":"<a href=\"ts.PostfixExpression.html\">ts.PostfixExpression</a>"},{"name":"PostfixUnaryExpression","longname":"ts.PostfixUnaryExpression","link":"<a href=\"ts.PostfixUnaryExpression.html\">ts.PostfixUnaryExpression</a>"},{"name":"PrefixUnaryExpression","longname":"ts.PrefixUnaryExpression","link":"<a href=\"ts.PrefixUnaryExpression.html\">ts.PrefixUnaryExpression</a>"},{"name":"PreProcessedFileInfo","longname":"ts.PreProcessedFileInfo","link":"<a href=\"ts.PreProcessedFileInfo.html\">ts.PreProcessedFileInfo</a>"},{"name":"PrimaryExpression","longname":"ts.PrimaryExpression","link":"<a href=\"ts.PrimaryExpression.html\">ts.PrimaryExpression</a>"},{"name":"Program","longname":"ts.Program","link":"<a href=\"ts.Program.html\">ts.Program</a>"},{"name":"PropertyAccessExpression","longname":"ts.PropertyAccessExpression","link":"<a href=\"ts.PropertyAccessExpression.html\">ts.PropertyAccessExpression</a>"},{"name":"PropertyAssignment","longname":"ts.PropertyAssignment","link":"<a href=\"ts.PropertyAssignment.html\">ts.PropertyAssignment</a>"},{"name":"PropertyDeclaration","longname":"ts.PropertyDeclaration","link":"<a href=\"ts.PropertyDeclaration.html\">ts.PropertyDeclaration</a>"},{"name":"QualifiedName","longname":"ts.QualifiedName","link":"<a href=\"ts.QualifiedName.html\">ts.QualifiedName</a>"},{"name":"QuickInfo","longname":"ts.QuickInfo","link":"<a href=\"ts.QuickInfo.html\">ts.QuickInfo</a>"},{"name":"ReferenceEntry","longname":"ts.ReferenceEntry","link":"<a href=\"ts.ReferenceEntry.html\">ts.ReferenceEntry</a>"},{"name":"RenameInfo","longname":"ts.RenameInfo","link":"<a href=\"ts.RenameInfo.html\">ts.RenameInfo</a>"},{"name":"RenameLocation","longname":"ts.RenameLocation","link":"<a href=\"ts.RenameLocation.html\">ts.RenameLocation</a>"},{"name":"ResolvedType","longname":"ts.ResolvedType","link":"<a href=\"ts.ResolvedType.html\">ts.ResolvedType</a>"},{"name":"ReturnStatement","longname":"ts.ReturnStatement","link":"<a href=\"ts.ReturnStatement.html\">ts.ReturnStatement</a>"},{"name":"Scanner","longname":"ts.Scanner","link":"<a href=\"ts.Scanner.html\">ts.Scanner</a>"},{"name":"ShorthandPropertyAssignment","longname":"ts.ShorthandPropertyAssignment","link":"<a href=\"ts.ShorthandPropertyAssignment.html\">ts.ShorthandPropertyAssignment</a>"},{"name":"Signature","longname":"ts.Signature","link":"<a href=\"ts.Signature.html\">ts.Signature</a>"},{"name":"SignatureDeclaration","longname":"ts.SignatureDeclaration","link":"<a href=\"ts.SignatureDeclaration.html\">ts.SignatureDeclaration</a>"},{"name":"SignatureHelpItem","longname":"ts.SignatureHelpItem","link":"<a href=\"ts.SignatureHelpItem.html\">ts.SignatureHelpItem</a>"},{"name":"SignatureHelpItems","longname":"ts.SignatureHelpItems","link":"<a href=\"ts.SignatureHelpItems.html\">ts.SignatureHelpItems</a>"},{"name":"SignatureHelpParameter","longname":"ts.SignatureHelpParameter","link":"<a href=\"ts.SignatureHelpParameter.html\">ts.SignatureHelpParameter</a>"},{"name":"SourceFile","longname":"ts.SourceFile","link":"<a href=\"ts.SourceFile.html\">ts.SourceFile</a>"},{"name":"SourceMapData","longname":"ts.SourceMapData","link":"<a href=\"ts.SourceMapData.html\">ts.SourceMapData</a>"},{"name":"SourceMapSpan","longname":"ts.SourceMapSpan","link":"<a href=\"ts.SourceMapSpan.html\">ts.SourceMapSpan</a>"},{"name":"Statement","longname":"ts.Statement","link":"<a href=\"ts.Statement.html\">ts.Statement</a>"},{"name":"StringLiteralExpression","longname":"ts.StringLiteralExpression","link":"<a href=\"ts.StringLiteralExpression.html\">ts.StringLiteralExpression</a>"},{"name":"StringLiteralType","longname":"ts.StringLiteralType","link":"<a href=\"ts.StringLiteralType.html\">ts.StringLiteralType</a>"},{"name":"SwitchStatement","longname":"ts.SwitchStatement","link":"<a href=\"ts.SwitchStatement.html\">ts.SwitchStatement</a>"},{"name":"Symbol","longname":"ts.Symbol","link":"<a href=\"ts.Symbol.html\">ts.Symbol</a>"},{"name":"SymbolAccessiblityResult","longname":"ts.SymbolAccessiblityResult","link":"<a href=\"ts.SymbolAccessiblityResult.html\">ts.SymbolAccessiblityResult</a>"},{"name":"SymbolDisplayBuilder","longname":"ts.SymbolDisplayBuilder","link":"<a href=\"ts.SymbolDisplayBuilder.html\">ts.SymbolDisplayBuilder</a>"},{"name":"SymbolDisplayPart","longname":"ts.SymbolDisplayPart","link":"<a href=\"ts.SymbolDisplayPart.html\">ts.SymbolDisplayPart</a>"},{"name":"SymbolLinks","longname":"ts.SymbolLinks","link":"<a href=\"ts.SymbolLinks.html\">ts.SymbolLinks</a>"},{"name":"SymbolTable","longname":"ts.SymbolTable","link":"<a href=\"ts.SymbolTable.html\">ts.SymbolTable</a>"},{"name":"SymbolVisibilityResult","longname":"ts.SymbolVisibilityResult","link":"<a href=\"ts.SymbolVisibilityResult.html\">ts.SymbolVisibilityResult</a>"},{"name":"SymbolWriter","longname":"ts.SymbolWriter","link":"<a href=\"ts.SymbolWriter.html\">ts.SymbolWriter</a>"},{"name":"TaggedTemplateExpression","longname":"ts.TaggedTemplateExpression","link":"<a href=\"ts.TaggedTemplateExpression.html\">ts.TaggedTemplateExpression</a>"},{"name":"TemplateExpression","longname":"ts.TemplateExpression","link":"<a href=\"ts.TemplateExpression.html\">ts.TemplateExpression</a>"},{"name":"TemplateSpan","longname":"ts.TemplateSpan","link":"<a href=\"ts.TemplateSpan.html\">ts.TemplateSpan</a>"},{"name":"TextRange","longname":"ts.TextRange","link":"<a href=\"ts.TextRange.html\">ts.TextRange</a>"},{"name":"ThrowStatement","longname":"ts.ThrowStatement","link":"<a href=\"ts.ThrowStatement.html\">ts.ThrowStatement</a>"},{"name":"TodoComment","longname":"ts.TodoComment","link":"<a href=\"ts.TodoComment.html\">ts.TodoComment</a>"},{"name":"TodoCommentDescriptor","longname":"ts.TodoCommentDescriptor","link":"<a href=\"ts.TodoCommentDescriptor.html\">ts.TodoCommentDescriptor</a>"},{"name":"TryStatement","longname":"ts.TryStatement","link":"<a href=\"ts.TryStatement.html\">ts.TryStatement</a>"},{"name":"TupleType","longname":"ts.TupleType","link":"<a href=\"ts.TupleType.html\">ts.TupleType</a>"},{"name":"TupleTypeNode","longname":"ts.TupleTypeNode","link":"<a href=\"ts.TupleTypeNode.html\">ts.TupleTypeNode</a>"},{"name":"Type","longname":"ts.Type","link":"<a href=\"ts.Type.html\">ts.Type</a>"},{"name":"TypeAliasDeclaration","longname":"ts.TypeAliasDeclaration","link":"<a href=\"ts.TypeAliasDeclaration.html\">ts.TypeAliasDeclaration</a>"},{"name":"TypeAssertion","longname":"ts.TypeAssertion","link":"<a href=\"ts.TypeAssertion.html\">ts.TypeAssertion</a>"},{"name":"TypeChecker","longname":"ts.TypeChecker","link":"<a href=\"ts.TypeChecker.html\">ts.TypeChecker</a>"},{"name":"TypeInferences","longname":"ts.TypeInferences","link":"<a href=\"ts.TypeInferences.html\">ts.TypeInferences</a>"},{"name":"TypeLiteralNode","longname":"ts.TypeLiteralNode","link":"<a href=\"ts.TypeLiteralNode.html\">ts.TypeLiteralNode</a>"},{"name":"TypeNode","longname":"ts.TypeNode","link":"<a href=\"ts.TypeNode.html\">ts.TypeNode</a>"},{"name":"TypeOfExpression","longname":"ts.TypeOfExpression","link":"<a href=\"ts.TypeOfExpression.html\">ts.TypeOfExpression</a>"},{"name":"TypeParameter","longname":"ts.TypeParameter","link":"<a href=\"ts.TypeParameter.html\">ts.TypeParameter</a>"},{"name":"TypeParameterDeclaration","longname":"ts.TypeParameterDeclaration","link":"<a href=\"ts.TypeParameterDeclaration.html\">ts.TypeParameterDeclaration</a>"},{"name":"TypeQueryNode","longname":"ts.TypeQueryNode","link":"<a href=\"ts.TypeQueryNode.html\">ts.TypeQueryNode</a>"},{"name":"TypeReference","longname":"ts.TypeReference","link":"<a href=\"ts.TypeReference.html\">ts.TypeReference</a>"},{"name":"TypeReferenceNode","longname":"ts.TypeReferenceNode","link":"<a href=\"ts.TypeReferenceNode.html\">ts.TypeReferenceNode</a>"},{"name":"UnaryExpression","longname":"ts.UnaryExpression","link":"<a href=\"ts.UnaryExpression.html\">ts.UnaryExpression</a>"},{"name":"UnionType","longname":"ts.UnionType","link":"<a href=\"ts.UnionType.html\">ts.UnionType</a>"},{"name":"UnionTypeNode","longname":"ts.UnionTypeNode","link":"<a href=\"ts.UnionTypeNode.html\">ts.UnionTypeNode</a>"},{"name":"VariableDeclaration","longname":"ts.VariableDeclaration","link":"<a href=\"ts.VariableDeclaration.html\">ts.VariableDeclaration</a>"},{"name":"VariableStatement","longname":"ts.VariableStatement","link":"<a href=\"ts.VariableStatement.html\">ts.VariableStatement</a>"},{"name":"VoidExpression","longname":"ts.VoidExpression","link":"<a href=\"ts.VoidExpression.html\">ts.VoidExpression</a>"},{"name":"WhileStatement","longname":"ts.WhileStatement","link":"<a href=\"ts.WhileStatement.html\">ts.WhileStatement</a>"},{"name":"WithStatement","longname":"ts.WithStatement","link":"<a href=\"ts.WithStatement.html\">ts.WithStatement</a>"},{"name":"YieldExpression","longname":"ts.YieldExpression","link":"<a href=\"ts.YieldExpression.html\">ts.YieldExpression</a>"},{"name":"CallLikeExpression","longname":"ts.CallLikeExpression","link":"<a href=\"ts.html#.CallLikeExpression\">ts.CallLikeExpression</a>"},{"name":"CaseOrDefaultClause","longname":"ts.CaseOrDefaultClause","link":"<a href=\"ts.html#.CaseOrDefaultClause\">ts.CaseOrDefaultClause</a>"},{"name":"DeclarationName","longname":"ts.DeclarationName","link":"<a href=\"ts.html#.DeclarationName\">ts.DeclarationName</a>"},{"name":"EntityName","longname":"ts.EntityName","link":"<a href=\"ts.html#.EntityName\">ts.EntityName</a>"},{"name":"GetLineAndCharacterOfPositionReturnsType","longname":"ts.GetLineAndCharacterOfPositionReturnsType","link":"<a href=\"ts.html#.GetLineAndCharacterOfPositionReturnsType\">ts.GetLineAndCharacterOfPositionReturnsType</a>"},{"name":"PositionToLineAndCharacterReturnsType","longname":"ts.PositionToLineAndCharacterReturnsType","link":"<a href=\"ts.html#.PositionToLineAndCharacterReturnsType\">ts.PositionToLineAndCharacterReturnsType</a>"},{"name":"VariableOrParameterDeclaration","longname":"ts.VariableOrParameterDeclaration","link":"<a href=\"ts.html#.VariableOrParameterDeclaration\">ts.VariableOrParameterDeclaration</a>"},{"name":"VariableOrParameterOrPropertyDeclaration","longname":"ts.VariableOrParameterOrPropertyDeclaration","link":"<a href=\"ts.html#.VariableOrParameterOrPropertyDeclaration\">ts.VariableOrParameterOrPropertyDeclaration</a>"},{"name":"CharacterCodes","longname":"ts.CharacterCodes","link":"<a href=\"ts.html#.CharacterCodes\">ts.CharacterCodes</a>"},{"name":"DiagnosticCategory","longname":"ts.DiagnosticCategory","link":"<a href=\"ts.html#.DiagnosticCategory\">ts.DiagnosticCategory</a>"},{"name":"EmitReturnStatus","longname":"ts.EmitReturnStatus","link":"<a href=\"ts.html#.EmitReturnStatus\">ts.EmitReturnStatus</a>"},{"name":"EndOfLineState","longname":"ts.EndOfLineState","link":"<a href=\"ts.html#.EndOfLineState\">ts.EndOfLineState</a>"},{"name":"IndexKind","longname":"ts.IndexKind","link":"<a href=\"ts.html#.IndexKind\">ts.IndexKind</a>"},{"name":"ModuleKind","longname":"ts.ModuleKind","link":"<a href=\"ts.html#.ModuleKind\">ts.ModuleKind</a>"},{"name":"NodeCheckFlags","longname":"ts.NodeCheckFlags","link":"<a href=\"ts.html#.NodeCheckFlags\">ts.NodeCheckFlags</a>"},{"name":"NodeFlags","longname":"ts.NodeFlags","link":"<a href=\"ts.html#.NodeFlags\">ts.NodeFlags</a>"},{"name":"OutputFileType","longname":"ts.OutputFileType","link":"<a href=\"ts.html#.OutputFileType\">ts.OutputFileType</a>"},{"name":"ParserContextFlags","longname":"ts.ParserContextFlags","link":"<a href=\"ts.html#.ParserContextFlags\">ts.ParserContextFlags</a>"},{"name":"ScriptTarget","longname":"ts.ScriptTarget","link":"<a href=\"ts.html#.ScriptTarget\">ts.ScriptTarget</a>"},{"name":"SignatureKind","longname":"ts.SignatureKind","link":"<a href=\"ts.html#.SignatureKind\">ts.SignatureKind</a>"},{"name":"SymbolAccessibility","longname":"ts.SymbolAccessibility","link":"<a href=\"ts.html#.SymbolAccessibility\">ts.SymbolAccessibility</a>"},{"name":"SymbolDisplayPartKind","longname":"ts.SymbolDisplayPartKind","link":"<a href=\"ts.html#.SymbolDisplayPartKind\">ts.SymbolDisplayPartKind</a>"},{"name":"SymbolFlags","longname":"ts.SymbolFlags","link":"<a href=\"ts.html#.SymbolFlags\">ts.SymbolFlags</a>"},{"name":"SymbolFormatFlags","longname":"ts.SymbolFormatFlags","link":"<a href=\"ts.html#.SymbolFormatFlags\">ts.SymbolFormatFlags</a>"},{"name":"SyntaxKind","longname":"ts.SyntaxKind","link":"<a href=\"ts.html#.SyntaxKind\">ts.SyntaxKind</a>"},{"name":"TokenClass","longname":"ts.TokenClass","link":"<a href=\"ts.html#.TokenClass\">ts.TokenClass</a>"},{"name":"TypeFlags","longname":"ts.TypeFlags","link":"<a href=\"ts.html#.TypeFlags\">ts.TypeFlags</a>"},{"name":"TypeFormatFlags","longname":"ts.TypeFormatFlags","link":"<a href=\"ts.html#.TypeFormatFlags\">ts.TypeFormatFlags</a>"},{"name":"CommentCallback","longname":"ts.CommentCallback","link":"<a href=\"ts.html#.CommentCallback\">ts.CommentCallback</a>"},{"name":"GetSourceFileOnErrorCallback","longname":"ts.CompilerHost.GetSourceFileOnErrorCallback","link":"<a href=\"ts.CompilerHost.html#.GetSourceFileOnErrorCallback\">ts.CompilerHost.GetSourceFileOnErrorCallback</a>"},{"name":"WriteFileOnErrorCallback","longname":"ts.CompilerHost.WriteFileOnErrorCallback","link":"<a href=\"ts.CompilerHost.html#.WriteFileOnErrorCallback\">ts.CompilerHost.WriteFileOnErrorCallback</a>"},{"name":"ErrorCallback","longname":"ts.ErrorCallback","link":"<a href=\"ts.html#.ErrorCallback\">ts.ErrorCallback</a>"},{"name":"ForEachChildCbNodeCallback","longname":"ts.ForEachChildCbNodeCallback","link":"<a href=\"ts.html#.ForEachChildCbNodeCallback\">ts.ForEachChildCbNodeCallback</a>"},{"name":"ForEachChildCbNodesCallback","longname":"ts.ForEachChildCbNodesCallback","link":"<a href=\"ts.html#.ForEachChildCbNodesCallback\">ts.ForEachChildCbNodesCallback</a>"},{"name":"GetNodeConstructorReturnsCallback","longname":"ts.GetNodeConstructorReturnsCallback","link":"<a href=\"ts.html#.GetNodeConstructorReturnsCallback\">ts.GetNodeConstructorReturnsCallback</a>"},{"name":"LookAheadCallbackCallback","longname":"ts.Scanner.LookAheadCallbackCallback","link":"<a href=\"ts.Scanner.html#.LookAheadCallbackCallback\">ts.Scanner.LookAheadCallbackCallback</a>"},{"name":"TryScanCallbackCallback","longname":"ts.Scanner.TryScanCallbackCallback","link":"<a href=\"ts.Scanner.html#.TryScanCallbackCallback\">ts.Scanner.TryScanCallbackCallback</a>"},{"name":"TypeMapper","longname":"ts.TypeMapper","link":"<a href=\"ts.html#.TypeMapper\">ts.TypeMapper</a>"},{"name":"ts","longname":"ts","link":"<a href=\"ts.html\">ts</a>"},{"name":"ScriptSnapshot","longname":"ts.ScriptSnapshot","link":"<a href=\"ts.ScriptSnapshot.html\">ts.ScriptSnapshot</a>"}];
+    </script>
+    <script src="scripts/main.js"></script>
+
+    
+    <!--Google Analytics-->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-62966702-1");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
+    
+</body>
+</html>
