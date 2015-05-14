@@ -62,6 +62,26 @@ module.exports = function (grunt) {
             }
         },
         
+        copy: {
+            site: {
+                expand: true,
+                cwd: "<%= paths.build %>/site",
+                src: "*/*.*",
+                dest: "<%= paths.dist %>"
+            }
+        },
+        
+        markdown: {
+            site: {
+                options: {
+                    template: "<%= paths.build %>/site/index.html"
+                },
+
+                src: "README.md",
+                dest: "<%= paths.dist %>/index.html"
+            }
+        },
+        
         tslint: {
             options: {
                 configuration: grunt.file.readJSON("tslint.json")
@@ -114,7 +134,6 @@ module.exports = function (grunt) {
                     commit: true,
                     push: true,
                     branch: "gh-pages",
-                    //remote: "git@github.com:spatools/ts2jsdoc.git",
                     message: "Built documentations %sourceName% from commit %sourceCommit% on branch %sourceBranch%"
                 }
             }
@@ -124,11 +143,13 @@ module.exports = function (grunt) {
     
     grunt.registerTask("dev", ["tslint:src", "clean:src", "typescript:src"]);
     grunt.registerTask("build", ["tslint:src", "clean:src", "typescript:dist"]);
+
     grunt.registerTask("doc", ["clean:dist", "jsdoc:typescript", "jsdoc:node"]);
+    grunt.registerTask("site", ["copy:site", "markdown:site"]);
     
-    grunt.registerTask("serve", ["dev", "doc", "connect:dist", "watch"]);
+    grunt.registerTask("serve", ["dev", "doc", "site", "connect:dist", "watch"]);
     
-    grunt.registerTask("publish", ["build", "doc", "buildcontrol:docs"]);
+    grunt.registerTask("publish", ["build", "doc", "site", "buildcontrol:docs"]);
     
     grunt.registerTask("default", ["build"]);
 };
