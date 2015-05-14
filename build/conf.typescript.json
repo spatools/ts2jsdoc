@@ -21,6 +21,7 @@
         "collapseSymbols": true,
         "footer": "Generated using default typescript.d.ts using <strong>ts2jsdoc</strong> project.",
         "copyright": "Copyright SPATools &copy; 2015 The contributors to the JSDoc3, ts2jsdoc, Typescript projects.",
+        "analytics": "UA-62966702-1",
         "outputSourceFiles": false,
         "outputSourcePath": false
     },
