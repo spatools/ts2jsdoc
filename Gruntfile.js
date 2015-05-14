@@ -81,7 +81,15 @@ module.exports = function (grunt) {
                 dest: "<%= paths.dist %>/index.html"
             }
         },
-        
+
+        "gh-pages": {
+            options: {
+                base: "<%= paths.dist %",
+                message: "Update documentation for version <%= pkg.version %>"
+            },
+            src: ["**"]
+        },
+
         tslint: {
             options: {
                 configuration: grunt.file.readJSON("tslint.json")
@@ -125,21 +133,9 @@ module.exports = function (grunt) {
                 },
                 files: ["<%= paths.dist %>/**/*.{js,html,css}"]
             }
-        },
-        
-        buildcontrol: {
-            docs: {
-                options: {
-                    dir: "<%= paths.dist %>",
-                    commit: true,
-                    push: true,
-                    branch: "gh-pages",
-                    message: "Built documentations %sourceName% from commit %sourceCommit% on branch %sourceBranch%"
-                }
-            }
         }
+
     });
-    
     
     grunt.registerTask("dev", ["tslint:src", "clean:src", "typescript:src"]);
     grunt.registerTask("build", ["tslint:src", "clean:src", "typescript:dist"]);
@@ -148,8 +144,7 @@ module.exports = function (grunt) {
     grunt.registerTask("site", ["copy:site", "markdown:site"]);
     
     grunt.registerTask("serve", ["dev", "doc", "site", "connect:dist", "watch"]);
-    
-    grunt.registerTask("publish", ["build", "doc", "site", "buildcontrol:docs"]);
+    grunt.registerTask("publish", ["build", "doc", "site", "gh-pages"]);
     
     grunt.registerTask("default", ["build"]);
 };

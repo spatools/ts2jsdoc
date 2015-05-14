@@ -10,6 +10,7 @@
 .vs/
 
 # Build results
+.grunt/
 [Dd]ebug/
 [Rr]elease/
 x64/
