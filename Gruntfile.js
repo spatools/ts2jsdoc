@@ -84,7 +84,7 @@ module.exports = function (grunt) {
 
         "gh-pages": {
             options: {
-                base: "<%= paths.dist %",
+                base: "<%= paths.dist %>",
                 message: "Update documentation for version <%= pkg.version %>"
             },
             src: ["**"]
