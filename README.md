@@ -176,3 +176,8 @@ $ grunt <task>
 * __doc__: Creates jsdoc for typescript.d.ts and node.d.ts
 * __serve__: Creates a HTTP server to test created jsdoc sites on http://localhost:8080/.
 
+## Release History
+
+* 0.1.0 - Initial release.
+* 0.1.1 - Fix `.npmignore` issues.
+* 0.1.2 - Update demos links
