@@ -1,12 +1,45 @@
+# User-specific files
+*.dat
+*.suo
+*.user
+*.sln.docstates
+*.sln
+*.*proj
+.vs/
+
+# git files
 .git*
+
+# Development files
+*.js.map
 *.ts
 *.d.ts
-.grunt/
-build/
-temp/
-out/
-dist/
 typings/
 Gruntfile.js
 tslint.json
 .travis.yml
+
+# Build results
+.grunt/
+build/
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Oo]bj/
+[Dd]ist/
+[Oo]ut/
+[Tt]mp/
+[Tt]emp/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store
